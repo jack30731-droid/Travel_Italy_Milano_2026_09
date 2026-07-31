@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 義大利經典與蔚藍海岸秘境：專屬私人導覽手冊 (PPT Booklet Edition)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Noto+Serif+TC:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        italy: {
+                            red: '#C8102E',
+                            green: '#008C45',
+                            gold: '#D4AF37',
+                            navy: '#0F172A',
+                            slateBg: '#1E293B',
+                            sand: '#FDFBF7',
+                            cardBg: '#FFFFFF',
+                            accent: '#B45309'
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        serifTC: ['Noto Serif TC', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; }
+            .page-break { page-break-before: always; }
+            .shadow-xl, .shadow-md, .shadow-2xl { box-shadow: none !important; }
+            .border { border-color: #cbd5e1 !important; }
+            .slide-card { display: block !important; opacity: 1 !important; transform: none !important; page-break-after: always; }
+        }
+        .glass-header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(16px);
+        }
+        .ppt-slide {
+            min-height: 820px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .slide-transition {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-slate-900 pb-12">
+
+    <header class="sticky top-0 z-50 glass-header border-b border-slate-800 shadow-xl no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl">🇮🇹</span>
+                    <div>
+                        <span class="font-cinzel font-bold text-amber-400 text-lg tracking-wider block leading-none">ITALY 2026</span>
+                        <span class="text-[10px] text-slate-400 tracking-widest uppercase font-mono">PPT Presentation Travel Booklet</span>
+                    </div>
+                </div>
+                
+                <!-- Slide Jump Selector (PPT Mode) -->
+                <div id="slideJumpContainer" class="hidden md:flex items-center space-x-2 bg-slate-800/80 px-3 py-1.5 rounded-xl border border-slate-700 text-xs">
+                    <span class="text-slate-400"><i class="fa-solid fa-file-powerpoint text-amber-400 mr-1"></i>跳至 Slide:</span>
+                    <select id="slideSelect" onchange="goToSlide(parseInt(this.value))" class="bg-slate-900 text-amber-300 font-semibold rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-amber-500 border border-slate-700">
+                        <option value="0">1. 封面與雙人合影 (Cover)</option>
+                        <option value="1">2. 城市節點與行程亮點 (Cities Brief)</option>
+                        <option value="2">3. 泰國航空航班詳細資訊 (Flights)</option>
+                        <option value="3">4. 義大利城際與區間火車 (Trains)</option>
+                        <option value="4">5. 三大奢華飯店住宿資訊 (Hotels)</option>
+                        <option value="5">6. 預算與總費用統計表 (Expenses)</option>
+                        <option value="6">7. City 1: 卡莫利 Camogli 深度景點與美食</option>
+                        <option value="7">8. City 2: 聖瑪格麗塔 SML 絕美海岸與秘境</option>
+                        <option value="8">9. City 3: 波托菲諾 Portofino 奢華秘境與海岸</option>
+                        <option value="9">10. City 4: 佛羅倫斯 Firenze 藝術與托斯卡尼</option>
+                        <option value="10">11. City 5: 米蘭 Milano & 瑞士伯爾尼納快車</option>
+                        <option value="11">12. 專屬景點詳細資訊總表 (Master List - 完整版)</option>
+                    </select>
+                </div>
+
+                <!-- Display Mode & Action Buttons -->
+                <div class="flex items-center space-x-3">
+                    <button onclick="toggleViewMode()" id="viewModeBtn" class="flex items-center space-x-1.5 text-xs bg-amber-500/20 text-amber-300 border border-amber-500/40 px-3 py-2 rounded-xl hover:bg-amber-500 hover:text-slate-950 transition font-medium">
+                        <i class="fa-solid fa-sliders"></i>
+                        <span id="viewModeText">切換為「卷軸全檢視」</span>
+                    </button>
+
+                    <button onclick="window.print()" class="flex items-center space-x-1 text-xs bg-slate-800 text-slate-200 border border-slate-700 px-3 py-2 rounded-xl hover:bg-slate-700 transition">
+                        <i class="fa-solid fa-print"></i>
+                        <span class="hidden sm:inline">PDF / 列印</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick PPT Slide Control Bar -->
+        <div id="pptControlBar" class="bg-slate-900/90 border-t border-slate-800/80 px-4 py-2 flex items-center justify-between text-xs max-w-7xl mx-auto">
+            <div class="flex items-center space-x-2 text-slate-400">
+                <button onclick="prevSlide()" class="p-1.5 rounded-lg bg-slate-800 hover:bg-amber-500 hover:text-slate-950 transition font-semibold"><i class="fa-solid fa-chevron-left mr-1"></i> 上一張</button>
+                <span id="slideCounter" class="font-mono text-amber-400 font-bold px-3 py-1 bg-slate-950 rounded-lg border border-slate-800">Slide 1 / 12</span>
+                <button onclick="nextSlide()" class="p-1.5 rounded-lg bg-slate-800 hover:bg-amber-500 hover:text-slate-950 transition font-semibold">下一張 <i class="fa-solid fa-chevron-right ml-1"></i></button>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="w-1/3 bg-slate-800 h-2.5 rounded-full overflow-hidden hidden sm:block border border-slate-700">
+                <div id="progressBar" class="bg-gradient-to-r from-amber-500 to-amber-300 h-full w-1/12 transition-all duration-300"></div>
+            </div>
+
+            <div class="text-slate-400 text-[11px] hidden md:block">
+                <i class="fa-regular fa-keyboard mr-1"></i> 提示：鍵盤方向鍵 <span class="bg-slate-800 text-amber-400 px-1.5 py-0.5 rounded font-mono">←</span> <span class="bg-slate-800 text-amber-400 px-1.5 py-0.5 rounded font-mono">→</span> 輕鬆換頁
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- SLIDE 1: Cover & Photo Section -->
+        <section id="slide-0" class="slide-card slide-transition ppt-slide bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl relative mb-12">
+            <div class="absolute inset-0 z-0 opacity-25 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=2000&q=80');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent z-0"></div>
+
+            <div class="relative z-10 p-6 sm:p-10 lg:p-12 flex flex-col justify-between h-full flex-1">
+                <div class="flex items-center justify-between border-b border-slate-800/80 pb-4">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs tracking-widest uppercase font-semibold">
+                        <i class="fa-solid fa-star"></i>
+                        <span>Slide 01 ｜ PPT Cover Booklet</span>
+                    </div>
+                    <span class="text-xs font-mono text-slate-400">ITALY & RIVIERA 2026</span>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 my-auto items-stretch py-6">
+                    <div class="lg:col-span-7 flex flex-col justify-between space-y-6">
+                        <div class="space-y-4">
+                            <h1 class="font-serifTC text-3xl sm:text-5xl font-bold leading-tight tracking-tight text-white">
+                                2026 義大利經典與蔚藍海岸秘境<br>
+                                <span class="text-gradient font-cinzel text-2xl sm:text-4xl block mt-3">Exclusive Private Guide Book</span>
+                            </h1>
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
+                                一趟穿梭於利古里亞海岸藍海、文藝復興藝術殿堂、托斯卡尼陽光莊園與阿爾卑斯冰川快車的 14 天雙人奢華探秘之旅。全冊整合所有訂位代號、火車班次、飯店細項與專屬景點指引。
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700/80 shadow-inner">
+                                <div class="text-xs text-amber-400 uppercase tracking-wider font-semibold mb-1.5"><i class="fa-solid fa-user-check mr-1.5"></i> Exclusive Guests</div>
+                                <div class="font-bold text-slate-100 text-base sm:text-lg">Miss Anting Lee &<br>Mr. Chia Yang Hsieh</div>
+                            </div>
+                            <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700/80 shadow-inner">
+                                <div class="text-xs text-amber-400 uppercase tracking-wider font-semibold mb-1.5"><i class="fa-solid fa-calendar-days mr-1.5"></i> Travel Dates</div>
+                                <div class="font-bold text-slate-100 text-base sm:text-lg">2026/09/20 – 2026/10/03<br><span class="text-xs font-normal text-slate-400">(共 14 天 11 夜 5 大區域)</span></div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-4 pt-2">
+                            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 text-center">
+                                <div class="text-amber-400 font-bold font-mono text-xl sm:text-2xl">11 夜</div>
+                                <div class="text-xs text-slate-400 mt-1">三大奢華飯店</div>
+                            </div>
+                            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 text-center">
+                                <div class="text-teal-400 font-bold font-mono text-xl sm:text-2xl">2 國</div>
+                                <div class="text-xs text-slate-400 mt-1">跨越義大利 & 瑞士</div>
+                            </div>
+                            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 text-center">
+                                <div class="text-purple-400 font-bold font-mono text-xl sm:text-2xl">60+</div>
+                                <div class="text-xs text-slate-400 mt-1">精選景點與美饌</div>
+                            </div>
+                        </div>
+
+                        <div class="text-xs text-slate-400 italic pt-2">
+                            <i class="fa-solid fa-feather-pointed text-amber-400 mr-1.5"></i> Prepared by: Anting Lee assisted by Michael empowered by Gemini + Notebook LM
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 grid grid-rows-2 gap-4 min-h-[360px]">
+                        <div class="relative group rounded-2xl overflow-hidden border border-amber-500/40 shadow-xl bg-slate-900 flex flex-col justify-end p-5">
+                            <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1000&q=80" alt="Italy Riviera Landscape" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                            <div class="relative z-10 text-left">
+                                <span class="bg-amber-500 text-slate-950 text-xs font-bold px-2.5 py-0.5 rounded uppercase">Featured Coastline</span>
+                                <p class="text-base font-semibold text-white mt-1.5"><i class="fa-solid fa-camera mr-1"></i> 利古里亞蔚藍海岸 (Riviera)</p>
+                                <p class="text-xs text-slate-300">Portofino & Camogli Coastline</p>
+                            </div>
+                        </div>
+
+                        <div class="relative group rounded-2xl overflow-hidden border border-slate-700 shadow-xl bg-slate-900 flex flex-col justify-end p-5">
+                            <img src="https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=1000&q=80" alt="Florence Cathedral Landscape" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                            <div class="relative z-10 text-left">
+                                <span class="bg-teal-500 text-slate-950 text-xs font-bold px-2.5 py-0.5 rounded uppercase">Renaissance Heart</span>
+                                <p class="text-base font-semibold text-white mt-1.5"><i class="fa-solid fa-landmark mr-1"></i> 文藝復興殿堂 佛羅倫斯</p>
+                                <p class="text-xs text-slate-300">Duomo & Uffizi Gallery, Tuscany</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-800/80 pt-4 mt-auto">
+                    <span>Confidential Travel Booklet — For Anting & Michael</span>
+                    <span>Slide 1 of 12</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SLIDE 2: Touch Point of Cities and Brief of Sites -->
+        <section id="slide-1" class="slide-card slide-transition ppt-slide bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative mb-12 hidden">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-4 mb-4">
+                <div>
+                    <span class="text-xs font-bold text-amber-400 tracking-widest uppercase">Slide 02 ｜ City Overview</span>
+                    <h2 class="text-2xl sm:text-3xl font-serifTC font-bold text-white">城市節點與景點總覽 (Touch Points)</h2>
+                </div>
+                <span class="text-xs bg-amber-500/10 text-amber-300 px-3.5 py-1.5 rounded-full border border-amber-500/30 font-medium">14 天 11 夜跨國行程</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-auto flex-1 items-stretch py-2">
+                <div class="bg-slate-800/80 rounded-2xl p-5 border border-slate-700 hover:border-amber-500/50 transition flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative h-40 rounded-xl overflow-hidden mb-3.5">
+                            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent"></div>
+                            <span class="absolute bottom-2.5 left-2.5 text-xs font-bold px-2.5 py-1 bg-teal-500 text-slate-950 rounded">City 1 ｜ 9/21 - 9/25</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1.5">卡莫利 <span class="text-xs text-slate-400 font-normal">(Camogli)</span></h3>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            住宿基地。深入寧靜且充滿歷史底蘊的正宗漁村，品嚐雷科起司佛卡夏與在地海鮮。探索 13 世紀德拉戈納拉城堡、海事博物館，搭渡輪尋訪聖弗羅托索修道院。
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/60 text-xs text-amber-400 flex justify-between font-medium">
+                        <span><i class="fa-solid fa-house-chimney mr-1"></i> La Gioia B&B (4晚)</span>
+                        <span>正宗利古里亞漁村</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800/80 rounded-2xl p-5 border border-slate-700 hover:border-amber-500/50 transition flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative h-40 rounded-xl overflow-hidden mb-3.5">
+                            <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent"></div>
+                            <span class="absolute bottom-2.5 left-2.5 text-xs font-bold px-2.5 py-1 bg-blue-500 text-slate-950 rounded">City 2 ｜ 專屬探秘</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1.5">聖瑪格麗塔-利古雷 <span class="text-xs text-slate-400 font-normal">(Santa Margherita)</span></h3>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            優雅蔚藍海岸度假勝地。漫步高級海濱長廊，造訪杜拉佐別墅的美麗庭園，在帕拉吉海灘與汪汪海灘享受絕美風光與海濱奢華風情。
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/60 text-xs text-amber-400 flex justify-between font-medium">
+                        <span><i class="fa-solid fa-sun mr-1"></i> 9/21-9/25 期間探秘</span>
+                        <span>高級度假小鎮</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800/80 rounded-2xl p-5 border border-slate-700 hover:border-amber-500/50 transition flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative h-40 rounded-xl overflow-hidden mb-3.5">
+                            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent"></div>
+                            <span class="absolute bottom-2.5 left-2.5 text-xs font-bold px-2.5 py-1 bg-indigo-500 text-slate-950 rounded">City 3 ｜ 專屬探秘</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1.5">波托菲諾與海岸 <span class="text-xs text-slate-400 font-normal">(Portofino & Riviera)</span></h3>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            天堂灣明珠。漫步親吻步道、登上布朗城堡與波托菲諾燈塔俯瞰奢華海灣。延伸探訪韋內雷港 (Porto Venere) 與切爾沃山城 (Cervo)。
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/60 text-xs text-amber-400 flex justify-between font-medium">
+                        <span><i class="fa-solid fa-anchor mr-1"></i> 天堂灣奢華港灣</span>
+                        <span>親吻步道/古堡</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800/80 rounded-2xl p-5 border border-slate-700 hover:border-amber-500/50 transition flex flex-col justify-between h-full">
+                    <div>
+                        <div class="relative h-40 rounded-xl overflow-hidden mb-3.5">
+                            <img src="https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent"></div>
+                            <span class="absolute bottom-2.5 left-2.5 text-xs font-bold px-2.5 py-1 bg-amber-500 text-slate-950 rounded">City 4 ｜ 9/25 - 9/29</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1.5">佛羅倫斯 <span class="text-xs text-slate-400 font-normal">(Firenze)</span></h3>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            文藝復興搖籃。見證聖母百花大教堂。9/26 預約進入烏菲茲美術館。9/28 (週一) 展開專屬托斯卡尼一日遊 (Siena, Chianti, San Gimignano, Pisa)。
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/60 text-xs text-amber-400 flex justify-between font-medium">
+                        <span><i class="fa-solid fa-hotel mr-1"></i> 'RE-Dama Hostel (4晚)</span>
+                        <span>烏菲茲/托斯卡尼</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800/80 rounded-2xl p-5 border border-slate-700 hover:border-amber-500/50 transition flex flex-col justify-between h-full md:col-span-2 lg:col-span-2">
+                    <div>
+                        <div class="relative h-40 rounded-xl overflow-hidden mb-3.5">
+                            <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent"></div>
+                            <span class="absolute bottom-2.5 left-2.5 text-xs font-bold px-2.5 py-1 bg-purple-500 text-slate-950 rounded">City 5 ｜ 9/29 - 10/2</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1.5">米蘭 <span class="text-xs text-slate-400 font-normal">(Milano) & 瑞士伯爾尼納快車</span></h3>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                            時尚與藝術殿堂，探訪布雷拉畫廊與植物園。9/30 (週三) 踏上跨國之旅，搭乘伯爾尼納快車 (Bernina Express) 全景車廂前往瑞士，盡覽莫特拉奇冰川壯麗美景。
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-700/60 text-xs text-amber-400 flex justify-between font-medium">
+                        <span><i class="fa-solid fa-train mr-1"></i> Made to Measure Business (3晚)</span>
+                        <span>瑞士阿爾卑斯快車之旅</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center text-xs text-slate-500 border-t border-slate-800 pt-3 mt-auto">
+                <span>Slide 2 of 12 — City Overview</span>
+                <button onclick="nextSlide()" class="text-amber-400 hover:underline font-semibold">下一張：航班詳細資訊 <i class="fa-solid fa-arrow-right ml-1"></i></button>
+            </div>
+        </section>
+
+
+        <!-- SLIDE 3: Flight Details -->
+        <section id="slide-2" class="slide-card slide-transition ppt-slide bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative mb-12 hidden">
+            <div class="flex flex-col sm:flex-row justify-between sm:items-center border-b border-slate-800 pb-4 mb-4">
+                <div>
+                    <span class="text-xs font-bold text-amber-400 tracking-widest uppercase">Slide 03 ｜ Flight Schedule</span>
+                    <h2 class="text-2xl sm:text-3xl font-serifTC font-bold text-white">航班詳細資訊 (Flight Details)</h2>
+                </div>
+                <div class="mt-2 sm:mt-0 flex items-center space-x-3 text-xs bg-slate-800/80 px-3 py-2 rounded-xl border border-slate-700 text-slate-300">
+                    <div><i class="fa-solid fa-leaf text-emerald-400 mr-1"></i> 去程碳足跡: <strong class="text-white">223 Kgs CO2e</strong></div>
+                    <div class="border-l border-slate-700 h-4"></div>
+                    <div>回程碳足跡: <strong class="text-white">197 Kgs CO2e</strong></div>
+                </div>
+            </div>
+
+            <div class="my-auto space-y-5 flex-1 flex flex-col justify-center">
+                <div class="bg-slate-800/60 rounded-2xl border border-slate-700/80 overflow-hidden shadow-lg">
+                    <div class="p-4 bg-slate-800 border-b border-slate-700 flex justify-between items-center">
+                        <div class="flex items-center space-x-2">
+                            <span class="px-3 py-1 bg-amber-500 text-slate-950 font-bold rounded text-xs">THAI Airways</span>
+                            <span class="text-slate-200 text-sm sm:text-base font-semibold">泰國航空 全程接駁 (TPE ⇄ BKK ⇄ MXP)</span>
+                        </div>
+                        <span class="text-xs text-amber-400 font-mono font-semibold">經濟艙 (L) | 托運 23kg / 手提 7kg</span>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                            <thead>
+                                <tr class="bg-slate-900/80 text-slate-400 border-b border-slate-800">
+                                    <th class="py-3.5 px-4 font-semibold">航段 Route</th>
+                                    <th class="py-3.5 px-4 font-semibold">日期 Date</th>
+                                    <th class="py-3.5 px-4 font-semibold">航班號碼</th>
+                                    <th class="py-3.5 px-4 font-semibold">出發地與時間</th>
+                                    <th class="py-3.5 px-4 font-semibold">抵達地與時間</th>
+                                    <th class="py-3.5 px-4 font-semibold">艙等與行李額度</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800/60 text-slate-200">
+                                <tr class="hover:bg-slate-800/40 transition">
+                                    <td class="py-4 px-4 font-bold text-amber-400"><i class="fa-solid fa-plane-departure mr-2 text-slate-400"></i> TPE ➔ BKK</td>
+                                    <td class="py-4 px-4">2026/09/20</td>
+                                    <td class="py-4 px-4 font-mono font-bold text-amber-300">TG 635</td>
+                                    <td class="py-4 px-4">台北桃園 T1 <span class="font-bold text-white bg-slate-800 px-2 py-0.5 rounded ml-1">18:50</span></td>
+                                    <td class="py-4 px-4">曼谷素萬那普 <span class="font-bold text-white bg-slate-800 px-2 py-0.5 rounded ml-1">21:35</span></td>
+                                    <td class="py-4 px-4 text-slate-400">經濟艙 (L) ｜ 托運 23kg / 手提 7kg</td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/40 transition">
+                                    <td class="py-4 px-4 font-bold text-amber-400"><i class="fa-solid fa-plane-arrival mr-2 text-slate-400"></i> BKK ➔ MXP</td>
+                                    <td class="py-4 px-4">2026/09/21</td>
+                                    <td class="py-4 px-4 font-mono font-bold text-amber-300">TG 940</td>
+                                    <td class="py-4 px-4">曼谷素萬那普 <span class="font-bold text-white bg-slate-800 px-2 py-0.5 rounded ml-1">00:55</span></td>
+                                    <td class="py-4 px-4">米蘭馬爾彭薩 T1 <span class="font-bold text-white bg-slate-800 px-2 py-0.5 rounded ml-1">07:35</span></td>
+                                    <td class="py-4 px-4 text-slate-400">經濟艙 (L) ｜ 托運 23kg / 手提 7kg</td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/40 transition bg-slate-950/40">
+                                    <td class="py-4 px-4 font-bold text-amber-400"><i class="fa-solid fa-plane-departure mr-2 text-slate-400"></i> MXP ➔ BKK</td>
+                                    <td class="py-4 px-4">2026/10/02</td>
+                                    <td class="py-4 px-4 font-mono font-bold text-amber-300">TG 941</td>
+                                    <td class="py-4 px-4">米蘭馬爾彭薩 T1 <span class="font-bold text-white bg-slate-800 px-2 py-0.5 rounded ml-1">14:05</span></td>
+                                    <td class="py-4 px-4">曼谷素萬那普 <span class="font-bold text-white bg-slate-800 px-2 py-0.5 rounded ml-1">05:55 (+1)</span></td>
+                                    <td class="py-4 px-4 text-slate-400">經濟艙 (L) ｜ 托運 23kg / 手提 7kg</td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/40 transition bg-slate-950/40">
+                                    <td class="py-4 px-4 font-bold text-amber-400"><i class="fa-solid fa-plane-arrival mr-2 text-slate-400"></i> BKK ➔ TPE</td>
+                                    <td class="py-4 px-4">2026/10/03</td>
+                                    <td class="py-4 px-4 font-mono font-bold text-amber-300">TG 632</td>
+                                    <td class="py-4 px-4">曼谷素萬那普 <span class="font-bold text-white bg-slate-800 px-2 py-0.5 rounded ml-1">08:25</span></td>
+                                    <td class="py-4 px-4">台北桃園 T1 <span class="font-bold text-white bg-slate-800 px-2 py-0.5 rounded ml-1">13:05</span></td>
+                                    <td class="py-4 px-4 text-slate-400">經濟艙 (L) ｜ 托運 23kg / 手提 7kg</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="p-4 sm:p-5 bg-amber-500/10 border border-amber-500/30 rounded-2xl flex items-start space-x-3 text-xs sm:text-sm text-amber-200">
+                        <i class="fa-solid fa-circle-info text-amber-400 text-lg mt-0.5"></i>
+                        <div>
+                            <strong class="text-amber-400 text-sm">搭機提醒：</strong> 請提前於班機起飛前 3 小時抵達機場辦理託運與手續。出發去程抵達米蘭時間為 9/21 早上 07:35，可直接於馬爾彭薩機場轉乘 Malpensa Express 前往米蘭中央車站並轉赴卡莫利。
+                        </div>
+                    </div>
+                    <div class="p-4 sm:p-5 bg-slate-800/80 border border-slate-700/80 rounded-2xl flex items-start space-x-3 text-xs sm:text-sm text-slate-300">
+                        <i class="fa-solid fa-suitcase-rolling text-teal-400 text-lg mt-0.5"></i>
+                        <div>
+                            <strong class="text-teal-300 text-sm">行李指南：</strong> 全程託運行李額度 23kg/人，手提行李 7kg/人。建議隨身攜帶外套以備機上及轉機時空調溫差使用。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center text-xs text-slate-500 border-t border-slate-800 pt-3 mt-auto">
+                <span>Slide 3 of 12 — Flight Schedule</span>
+                <button onclick="nextSlide()" class="text-amber-400 hover:underline font-semibold">下一張：火車車次與劃位資訊 <i class="fa-solid fa-arrow-right ml-1"></i></button>
+            </div>
+        </section>
+
+
+        <!-- SLIDE 4: Train Details -->
+        <section id="slide-3" class="slide-card slide-transition ppt-slide bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative mb-12 hidden">
+            <div class="flex flex-col sm:flex-row justify-between sm:items-center border-b border-slate-800 pb-4 mb-6">
+                <div>
+                    <span class="text-xs font-bold text-amber-400 tracking-widest uppercase">Slide 04 ｜ Rail Transit</span>
+                    <h2 class="text-2xl sm:text-3xl font-serifTC font-bold text-white">火車詳細資訊與雙語站名 (Train Details)</h2>
+                </div>
+                <div class="text-xs text-slate-400 mt-2 sm:mt-0 font-medium">
+                    <i class="fa-solid fa-ticket text-amber-400 mr-1.5"></i> 查票請出示 PNR 或票號
+                </div>
+            </div>
+
+            <div class="my-auto space-y-5">
+                <!-- Date 1: Sep 21 -->
+                <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700">
+                    <div class="flex justify-between items-center border-b border-slate-700/80 pb-2.5 mb-3.5">
+                        <span class="text-sm font-bold text-amber-400"><i class="fa-solid fa-calendar-day mr-1.5"></i> September 21, 2026 (前往卡莫利 Camogli)</span>
+                        <span class="text-xs text-slate-400 font-medium">轉乘 2 次</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 text-xs sm:text-sm">
+                        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                            <div class="text-slate-400 flex justify-between mb-1.5">
+                                <span class="font-medium">Malpensa Express 80336</span>
+                                <span class="text-emerald-400 font-bold">自由座</span>
+                            </div>
+                            <div class="font-bold text-slate-100 text-sm">米蘭機場 T1 (10:41) ➔ 米蘭中央車站 (11:37)</div>
+                            <div class="text-xs text-slate-500 mt-1.5">Malpensa Aeroporto T1 ➔ Milano Centrale</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/40">
+                            <div class="text-amber-300 flex justify-between mb-1.5">
+                                <span class="font-bold">Intercity 665</span>
+                                <span class="font-mono bg-amber-500/20 text-amber-200 px-2 py-0.5 rounded font-bold">車廂 4 | 座位 12C, 12D</span>
+                            </div>
+                            <div class="font-bold text-white text-sm">米蘭中央車站 (12:10) ➔ 熱那亞王子廣場站 (13:44)</div>
+                            <div class="text-xs text-slate-300 mt-1.5 flex justify-between">
+                                <span>Genova Piazza Principe</span>
+                                <span>PNR: <strong class="font-mono text-amber-300 font-bold">ARFJ9N</strong></span>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                            <div class="text-slate-400 flex justify-between mb-1.5">
+                                <span class="font-medium">Regionale 12391</span>
+                                <span class="text-emerald-400 font-bold">自由座</span>
+                            </div>
+                            <div class="font-bold text-slate-100 text-sm">熱那亞王子廣場站 (14:11) ➔ 卡莫利站 (14:55)</div>
+                            <div class="text-xs text-slate-500 mt-1.5">Camogli-San Fruttuoso</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Date 2: Sep 25 -->
+                <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700">
+                    <div class="flex justify-between items-center border-b border-slate-700/80 pb-2.5 mb-3.5">
+                        <span class="text-sm font-bold text-amber-400"><i class="fa-solid fa-calendar-day mr-1.5"></i> September 25, 2026 (前往佛羅倫斯 Firenze)</span>
+                        <span class="text-xs text-slate-400 font-medium">途經比薩</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 text-xs sm:text-sm">
+                        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                            <div class="text-slate-400 flex justify-between mb-1.5">
+                                <span class="font-medium">Regionale 12369</span>
+                                <span class="text-emerald-400 font-bold">自由座</span>
+                            </div>
+                            <div class="font-bold text-slate-100 text-sm">卡莫利站 (12:29) ➔ 拉帕洛站 (12:42)</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/40">
+                            <div class="text-amber-300 flex justify-between mb-1.5">
+                                <span class="font-bold">Intercity 511</span>
+                                <span class="font-mono bg-amber-500/20 text-amber-200 px-2 py-0.5 rounded font-bold">車廂 4 | 座位 12C, 12D</span>
+                            </div>
+                            <div class="font-bold text-white text-sm">拉帕洛站 (13:03) ➔ 比薩中央車站 (14:50)</div>
+                            <div class="text-xs text-slate-300 mt-1.5 flex justify-between">
+                                <span>Pisa Centrale</span>
+                                <span>PNR: <strong class="font-mono text-amber-300 font-bold">ARF845</strong></span>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                            <div class="text-slate-400 flex justify-between mb-1.5">
+                                <span class="font-medium">Regionale Veloce 4040</span>
+                                <span class="text-emerald-400 font-bold">自由座</span>
+                            </div>
+                            <div class="font-bold text-slate-100 text-sm">比薩中央車站 (15:09) ➔ 佛羅倫斯 SMN 站 (16:01)</div>
+                            <div class="text-xs text-slate-400 mt-1.5">票號: 2904234519 / 20</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Date 3 & Date 4 Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+                    <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="font-bold text-amber-400 text-sm"><i class="fa-solid fa-calendar-day mr-1.5"></i> Sep 29, 2026 (前往米蘭)</span>
+                            <span class="font-mono bg-red-500/20 text-red-300 px-2.5 py-0.5 rounded border border-red-500/30 font-bold">Italo 9928</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5">
+                            <div class="font-bold text-white text-sm">佛羅倫斯 SMN 站 (13:25) ➔ 米蘭中央車站 (15:20)</div>
+                            <div class="flex justify-between text-slate-400 text-xs pt-1">
+                                <span>車廂 4 | 座位 79, 80</span>
+                                <span>Ref: <strong class="text-amber-300 font-mono font-bold">ZHJN4D</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="font-bold text-amber-400 text-sm"><i class="fa-solid fa-calendar-day mr-1.5"></i> Oct 02, 2026 (前往米蘭機場)</span>
+                            <span class="font-mono bg-slate-700 text-slate-300 px-2 py-0.5 rounded font-bold">Malpensa Express</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5">
+                            <div class="font-bold text-white text-sm">米蘭中央車站 (09:55) ➔ 米蘭機場 T1 (10:48)</div>
+                            <div class="text-slate-400 text-xs pt-1">車次: 2934 ｜ 自由座無劃位</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center text-xs text-slate-500 border-t border-slate-800 pt-4 mt-auto">
+                <span>Slide 4 of 12 — Train Schedule</span>
+                <button onclick="nextSlide()" class="text-amber-400 hover:underline font-semibold">下一張：三大飯店住宿詳情 <i class="fa-solid fa-arrow-right ml-1"></i></button>
+            </div>
+        </section>
+
+
+        <!-- SLIDE 5: Hotel Details -->
+        <section id="slide-4" class="slide-card slide-transition ppt-slide bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative mb-12 hidden">
+            <div class="flex flex-col sm:flex-row justify-between sm:items-center border-b border-slate-800 pb-4 mb-6">
+                <div>
+                    <span class="text-xs font-bold text-amber-400 tracking-widest uppercase">Slide 05 ｜ Hotel Accommodations</span>
+                    <h2 class="text-2xl sm:text-3xl font-serifTC font-bold text-white">三大精選飯店住宿資訊 (Hotel Details)</h2>
+                </div>
+                <span class="text-xs text-slate-400 mt-2 sm:mt-0 font-medium"><i class="fa-solid fa-id-card text-amber-400 mr-1.5"></i> Check-in 請出示主訂人護照</span>
+            </div>
+
+            <div class="my-auto grid grid-cols-1 lg:grid-cols-3 gap-5">
+                <!-- Hotel 1 -->
+                <div class="bg-slate-800/90 rounded-2xl p-5 sm:p-6 border border-slate-700 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="border-b border-slate-700/80 pb-3">
+                            <span class="text-xs font-bold text-teal-300 bg-teal-500/20 px-2.5 py-1 rounded border border-teal-500/30">卡莫利 4 晚 (9/21 - 9/25)</span>
+                            <h3 class="text-xl font-bold text-white mt-2.5">La Gioia Bed and Breakfast</h3>
+                            <p class="text-xs text-slate-400 mt-1"><i class="fa-solid fa-user text-amber-400 mr-1.5"></i> 住客: Chia Yang Hsieh</p>
+                        </div>
+                        
+                        <div class="text-xs sm:text-sm space-y-2 text-slate-300">
+                            <div><strong class="text-amber-400">入住:</strong> 9/21 (12:00-20:00) ➔ <strong>退房:</strong> 9/25 (10:30前)</div>
+                            <div><strong class="text-amber-400">電話:</strong> +39 339 148 8253</div>
+                            <div class="font-mono bg-slate-900 p-2.5 rounded border border-slate-800 text-slate-300">
+                                Ref: <strong class="text-amber-300 font-bold">6999746902</strong> ｜ PIN: <strong class="text-amber-300 font-bold">0952</strong>
+                            </div>
+                            <div class="p-3 bg-slate-900/80 rounded border border-slate-800 space-y-1">
+                                <div><strong>房價總額:</strong> EUR 480 (約 NT$ 17,664)</div>
+                                <div class="text-amber-300 font-medium"><strong>城市稅:</strong> TWD 883 (現場支付總額 EUR 504.00)</div>
+                            </div>
+                            <div class="text-xs text-slate-400 bg-amber-500/10 p-2.5 rounded border border-amber-500/20">
+                                <strong>取消政策:</strong> 2026/09/06 前免費取消。09/07 起收取 EUR 480。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-xs text-slate-400 pt-3 border-t border-slate-700">
+                        <i class="fa-solid fa-circle-check text-emerald-400 mr-1.5"></i> 雙人房含早餐 / 需求大床 / 禁派對 / 需提前致電告知抵達時間
+                    </div>
+                </div>
+
+                <!-- Hotel 2 -->
+                <div class="bg-slate-800/90 rounded-2xl p-5 sm:p-6 border border-slate-700 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="border-b border-slate-700/80 pb-3">
+                            <span class="text-xs font-bold text-amber-300 bg-amber-500/20 px-2.5 py-1 rounded border border-amber-500/30">佛羅倫斯 4 晚 (9/25 - 9/29)</span>
+                            <h3 class="text-xl font-bold text-white mt-2.5">'RE-Dama Hostel</h3>
+                            <p class="text-xs text-slate-400 mt-1"><i class="fa-solid fa-user text-amber-400 mr-1.5"></i> 住客: Michael Hsieh</p>
+                        </div>
+                        
+                        <div class="text-xs sm:text-sm space-y-2 text-slate-300">
+                            <div><strong class="text-amber-400">入住:</strong> 9/25 (15:00-16:00) ➔ <strong>退房:</strong> 9/29</div>
+                            <div class="font-mono bg-slate-900 p-2.5 rounded border border-slate-800 text-slate-300">
+                                Booking ID: <strong class="text-amber-300 font-bold">1740239473</strong><br>
+                                Ref: <strong class="text-amber-300 font-bold">5236914535</strong>
+                            </div>
+                            <div class="p-3 bg-slate-900/80 rounded border border-slate-800 space-y-1">
+                                <div><strong>房價總額:</strong> EUR 599.76 (約 NT$ 22,071)</div>
+                                <div class="text-amber-300 font-medium"><strong>城市稅:</strong> TWD 1,159.36 (到店付款)</div>
+                            </div>
+                            <div class="text-xs text-slate-400 bg-amber-500/10 p-2.5 rounded border border-amber-500/20">
+                                <strong>取消政策:</strong> 2026/09/22 前免費取消。入住前3天內取消收取 100%。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-xs text-slate-400 pt-3 border-t border-slate-700">
+                        <i class="fa-solid fa-circle-check text-emerald-400 mr-1.5"></i> 露台雙人房含早餐與 Wi-Fi / 大床 / 遠離電梯
+                    </div>
+                </div>
+
+                <!-- Hotel 3 -->
+                <div class="bg-slate-800/90 rounded-2xl p-5 sm:p-6 border border-slate-700 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="border-b border-slate-700/80 pb-3">
+                            <span class="text-xs font-bold text-purple-300 bg-purple-500/20 px-2.5 py-1 rounded border border-purple-500/30">米蘭 3 晚 (9/29 - 10/2)</span>
+                            <h3 class="text-xl font-bold text-white mt-2.5">Made to Measure Business</h3>
+                            <p class="text-xs text-slate-400 mt-1"><i class="fa-solid fa-user text-amber-400 mr-1.5"></i> 住客: Chia Yang Hsieh</p>
+                        </div>
+                        
+                        <div class="text-xs sm:text-sm space-y-2 text-slate-300">
+                            <div><strong class="text-amber-400">入住:</strong> 9/29 (12:00-13:00) ➔ <strong>退房:</strong> 10/2</div>
+                            <div><strong class="text-amber-400">電話:</strong> +39 02 4952 8480</div>
+                            <div class="font-mono bg-slate-900 p-2.5 rounded border border-slate-800 text-slate-300">
+                                Booking ID / Ref: <strong class="text-amber-300 font-bold">1740524223</strong>
+                            </div>
+                            <div class="p-3 bg-slate-900/80 rounded border border-slate-800 space-y-1">
+                                <div><strong>房價總額:</strong> EUR 616.01 (約 NT$ 22,669)</div>
+                                <div class="text-amber-300 font-medium"><strong>城市稅:</strong> TWD 2,061.48 (到店付款)</div>
+                            </div>
+                            <div class="text-xs text-slate-400 bg-amber-500/10 p-2.5 rounded border border-amber-500/20">
+                                <strong>取消政策:</strong> 2026/09/24 前免費取消。入住前5天內取消收取 100%。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-xs text-slate-400 pt-3 border-t border-slate-700">
+                        <i class="fa-solid fa-circle-check text-emerald-400 mr-1.5"></i> 雙人房含早餐與咖啡/茶 / 大床 / 遠離電梯
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center text-xs text-slate-500 border-t border-slate-800 pt-4 mt-auto">
+                <span>Slide 5 of 12 — Hotel Accommodations</span>
+                <button onclick="nextSlide()" class="text-amber-400 hover:underline font-semibold">下一張：預算與費用明細表 <i class="fa-solid fa-arrow-right ml-1"></i></button>
+            </div>
+        </section>
+
+
+        <!-- SLIDE 6: Expense Details -->
+        <section id="slide-5" class="slide-card slide-transition ppt-slide bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative mb-12 hidden">
+            <div class="flex flex-col sm:flex-row justify-between sm:items-center border-b border-slate-800 pb-4 mb-6">
+                <div>
+                    <span class="text-xs font-bold text-amber-400 tracking-widest uppercase">Slide 06 ｜ Budget Breakdown</span>
+                    <h2 class="text-2xl sm:text-3xl font-serifTC font-bold text-white">費用明細統整表 (Expense Details)</h2>
+                </div>
+                <div class="mt-2 sm:mt-0 bg-amber-500/20 border border-amber-500/40 rounded-2xl px-5 py-2.5 text-right">
+                    <div class="text-xs text-amber-300 font-medium">總計真實預估花費 (Total Tally)</div>
+                    <div class="text-2xl font-extrabold text-amber-400 font-mono">NT$ 216,028</div>
+                </div>
+            </div>
+
+            <div class="my-auto space-y-3">
+                <div class="text-xs text-slate-400 mb-2">
+                    <i class="fa-solid fa-calculator mr-1 text-amber-400"></i> 匯率基準：1 EUR = 36.8 TWD, 1 CNY = 4.5 TWD, 1 USD = 32 TWD
+                </div>
+
+                <div class="overflow-x-auto rounded-2xl border border-slate-800">
+                    <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                        <thead>
+                            <tr class="bg-slate-800 text-slate-300 border-b border-slate-700">
+                                <th class="py-3 px-4 font-semibold">項目 Category</th>
+                                <th class="py-3 px-4 font-semibold">日期 Date</th>
+                                <th class="py-3 px-4 font-semibold">城市區域 City / Area</th>
+                                <th class="py-3 px-4 font-semibold">原始幣別與金額</th>
+                                <th class="py-3 px-4 font-semibold text-right">折合新台幣 (NTD)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800/80 text-slate-300">
+                            <tr class="hover:bg-slate-800/40">
+                                <td class="py-2.5 px-4 font-medium text-white"><i class="fa-solid fa-plane text-blue-400 mr-2"></i>Flights 雙人機票</td>
+                                <td class="py-2.5 px-4">9/20 - 10/3</td>
+                                <td class="py-2.5 px-4">台北 - 米蘭</td>
+                                <td class="py-2.5 px-4">TWD 65,594.00</td>
+                                <td class="py-2.5 px-4 font-mono font-bold text-right text-amber-300">NT$ 65,594</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40">
+                                <td class="py-2.5 px-4 font-medium text-white"><i class="fa-solid fa-hotel text-emerald-400 mr-2"></i>Accommodations 住宿與城市稅</td>
+                                <td class="py-2.5 px-4">9/21 - 10/2</td>
+                                <td class="py-2.5 px-4">卡莫利 / 佛羅倫斯 / 米蘭</td>
+                                <td class="py-2.5 px-4">依飯店細項列表合計</td>
+                                <td class="py-2.5 px-4 font-mono font-bold text-right text-amber-300">NT$ 66,507</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40">
+                                <td class="py-2.5 px-4 font-medium text-white"><i class="fa-solid fa-train text-amber-400 mr-2"></i>Trains (9/21 米蘭➔熱那亞)</td>
+                                <td class="py-2.5 px-4">9/21</td>
+                                <td class="py-2.5 px-4">IC 665 雙人票</td>
+                                <td class="py-2.5 px-4">EUR 37.80</td>
+                                <td class="py-2.5 px-4 font-mono font-bold text-right text-amber-300">NT$ 1,391</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40">
+                                <td class="py-2.5 px-4 font-medium text-white"><i class="fa-solid fa-train text-amber-400 mr-2"></i>Trains (9/25 拉帕洛➔佛羅倫斯)</td>
+                                <td class="py-2.5 px-4">9/25</td>
+                                <td class="py-2.5 px-4">IC 511 + RV 4040 雙人</td>
+                                <td class="py-2.5 px-4">EUR 52.40</td>
+                                <td class="py-2.5 px-4 font-mono font-bold text-right text-amber-300">NT$ 1,928</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40">
+                                <td class="py-2.5 px-4 font-medium text-white"><i class="fa-solid fa-train text-amber-400 mr-2"></i>Trains (9/29 佛羅倫斯➔米蘭)</td>
+                                <td class="py-2.5 px-4">9/29</td>
+                                <td class="py-2.5 px-4">Italo 9928 雙人</td>
+                                <td class="py-2.5 px-4">EUR 64.80</td>
+                                <td class="py-2.5 px-4 font-mono font-bold text-right text-amber-300">NT$ 2,385</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40">
+                                <td class="py-2.5 px-4 font-medium text-white"><i class="fa-solid fa-train text-amber-400 mr-2"></i>Trains (機場快線與其他區間車估算)</td>
+                                <td class="py-2.5 px-4">各日</td>
+                                <td class="py-2.5 px-4">依原始 Omio 套票差額估算</td>
+                                <td class="py-2.5 px-4">預留差額</td>
+                                <td class="py-2.5 px-4 font-mono font-bold text-right text-amber-300">NT$ 2,647</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40">
+                                <td class="py-2.5 px-4 font-medium text-white"><i class="fa-solid fa-ticket text-purple-400 mr-2"></i>Activities (烏菲茲美術館門票)</td>
+                                <td class="py-2.5 px-4">9/26</td>
+                                <td class="py-2.5 px-4">Uffizi Passepartout</td>
+                                <td class="py-2.5 px-4">EUR 80.00</td>
+                                <td class="py-2.5 px-4 font-mono font-bold text-right text-amber-300">NT$ 2,944</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40">
+                                <td class="py-2.5 px-4 font-medium text-white"><i class="fa-solid fa-bus text-purple-400 mr-2"></i>Activities (托斯卡尼一日遊)</td>
+                                <td class="py-2.5 px-4">9/28</td>
+                                <td class="py-2.5 px-4">GetYourGuide (9/25扣款)</td>
+                                <td class="py-2.5 px-4">EUR 190.00</td>
+                                <td class="py-2.5 px-4 font-mono font-bold text-right text-amber-300">NT$ 6,992</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40">
+                                <td class="py-2.5 px-4 font-medium text-white"><i class="fa-solid fa-mountain text-purple-400 mr-2"></i>Activities (伯爾尼納快車之旅)</td>
+                                <td class="py-2.5 px-4">9/30</td>
+                                <td class="py-2.5 px-4">GetYourGuide (9/27扣款)</td>
+                                <td class="py-2.5 px-4">EUR 334.00</td>
+                                <td class="py-2.5 px-4 font-mono font-bold text-right text-amber-300">NT$ 12,291</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40">
+                                <td class="py-2.5 px-4 font-medium text-white"><i class="fa-solid fa-ticket text-purple-400 mr-2"></i>Activities (其餘景點門票預估)</td>
+                                <td class="py-2.5 px-4">9/22 - 10/1</td>
+                                <td class="py-2.5 px-4">布朗城堡、史蒂伯特等</td>
+                                <td class="py-2.5 px-4">原估算差額</td>
+                                <td class="py-2.5 px-4 font-mono font-bold text-right text-amber-300">NT$ 3,170</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40">
+                                <td class="py-2.5 px-4 font-medium text-white"><i class="fa-solid fa-utensils text-rose-400 mr-2"></i>Dining (必吃清單單次造訪預算)</td>
+                                <td class="py-2.5 px-4">9/21 - 9/28</td>
+                                <td class="py-2.5 px-4">義大利區 (重點餐館)</td>
+                                <td class="py-2.5 px-4">依菜單預估</td>
+                                <td class="py-2.5 px-4 font-mono font-bold text-right text-amber-300">NT$ 9,016</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40">
+                                <td class="py-2.5 px-4 font-medium text-white"><i class="fa-solid fa-wallet text-rose-400 mr-2"></i>Daily Meals (每日常規餐飲零用金)</td>
+                                <td class="py-2.5 px-4">9/21 - 10/1</td>
+                                <td class="py-2.5 px-4">11 天 × 每日 €100</td>
+                                <td class="py-2.5 px-4">EUR 1,100.00</td>
+                                <td class="py-2.5 px-4 font-mono font-bold text-right text-amber-300">NT$ 40,480</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/40">
+                                <td class="py-2.5 px-4 font-medium text-white"><i class="fa-solid fa-wifi text-indigo-400 mr-2"></i>Miscellaneous (Klook eSIM)</td>
+                                <td class="py-2.5 px-4">9/20 - 10/3</td>
+                                <td class="py-2.5 px-4">義大利全區</td>
+                                <td class="py-2.5 px-4">TWD 683.00</td>
+                                <td class="py-2.5 px-4 font-mono font-bold text-right text-amber-300">NT$ 683</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center text-xs text-slate-500 border-t border-slate-800 pt-4 mt-auto">
+                <span>Slide 6 of 12 — Budget Breakdown</span>
+                <button onclick="nextSlide()" class="text-amber-400 hover:underline font-semibold">下一張：City 1 卡莫利 Camogli 深度景點 <i class="fa-solid fa-arrow-right ml-1"></i></button>
+            </div>
+        </section>
+
+
+        <!-- SLIDE 7: City 1 Camogli -->
+        <section id="slide-6" class="slide-card slide-transition ppt-slide bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative mb-12 hidden">
+            <div class="flex flex-col sm:flex-row justify-between sm:items-center border-b border-slate-800 pb-4 mb-6">
+                <div>
+                    <span class="text-xs font-bold text-teal-400 tracking-widest uppercase">Slide 07 ｜ City 1</span>
+                    <h2 class="text-2xl sm:text-3xl font-serifTC font-bold text-white">卡莫利 (Camogli)｜9/21 - 9/25</h2>
+                    <p class="text-xs text-slate-400 mt-1">浪漫住宿與在地美食基地 ｜ 13 世紀海防古堡、博物館與隱世修道院</p>
+                </div>
+                <span class="text-xs bg-teal-500/20 text-teal-300 px-3.5 py-1.5 rounded-full border border-teal-500/30 font-semibold">4 晚住宿基地</span>
+            </div>
+
+            <div class="my-auto grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch flex-1">
+                <div class="lg:col-span-5 rounded-2xl overflow-hidden border border-slate-700 relative min-h-[380px] flex flex-col justify-end p-6">
+                    <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1000&q=80" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent"></div>
+                    <div class="relative z-10">
+                        <span class="text-xs uppercase font-bold bg-amber-500 text-slate-950 px-2.5 py-1 rounded">Camogli Riviera</span>
+                        <h3 class="text-xl font-bold text-white mt-2">正宗利古里亞漁村與特色美饌</h3>
+                        <p class="text-xs sm:text-sm text-slate-200 mt-1.5 leading-relaxed">與波托菲諾隔海相望，享有天堂灣無與倫比的落日與雷科起司佛卡夏。</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg flex flex-col justify-between hover:border-amber-500/50 transition">
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-white text-base sm:text-lg flex items-center">
+                                <i class="fa-solid fa-castle text-amber-400 mr-2.5 text-xl"></i>德拉戈納拉城堡
+                            </h4>
+                            <div class="text-xs text-amber-300/80 font-mono">Castello Della Dragonara</div>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">13世紀的要塞，入口有16世紀大砲，登頂可俯瞰天堂灣絕美海景。</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg flex flex-col justify-between hover:border-amber-500/50 transition">
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-white text-base sm:text-lg flex items-center">
+                                <i class="fa-solid fa-church text-amber-400 mr-2.5 text-xl"></i>聖母升天聖殿
+                            </h4>
+                            <div class="text-xs text-amber-300/80 font-mono">Basilica di Santa Maria</div>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">位於城堡旁的當地信仰中心，擁有極具代表性的優美鐘樓。</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg flex flex-col justify-between hover:border-amber-500/50 transition">
+                        <div class="space-y-2">
+                            <h4 class="font-bold text-white text-base sm:text-lg flex items-center">
+                                <i class="fa-solid fa-ship text-amber-400 mr-2.5 text-xl"></i>卡莫利海事博物館
+                            </h4>
+                            <div class="text-xs text-amber-300/80 font-mono">Civico Museo Marinaro</div>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">展出超過 100 件歷史船模、航海儀器與古老航海文物紀錄。</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg flex flex-col justify-between hover:border-amber-500/50 transition">
+                        <div class="space-y-2">
+                            <div class="flex items-start justify-between">
+                                <h4 class="font-bold text-white text-base sm:text-lg flex items-center">
+                                    <i class="fa-solid fa-anchor text-amber-400 mr-2.5 text-xl"></i>聖弗羅托索修道院
+                                </h4>
+                                <span class="bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-bold px-2 py-0.5 rounded">渡輪 €17</span>
+                            </div>
+                            <div class="text-xs text-amber-300/80 font-mono">Abbazia di San Fruttuoso</div>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">隱匿於國家公園內，無車輛道路。從卡莫利搭乘渡輪前往最方便。</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg flex flex-col justify-between hover:border-amber-500/50 transition">
+                        <div class="space-y-2">
+                            <div class="flex items-start justify-between">
+                                <h4 class="font-bold text-white text-base sm:text-lg flex items-center">
+                                    <i class="fa-solid fa-utensils text-rose-400 mr-2.5 text-xl"></i>La Camogliese
+                                </h4>
+                                <span class="bg-slate-700 text-slate-200 text-xs px-2 py-0.5 rounded">€30–40</span>
+                            </div>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">浪漫義式海鮮餐廳。推薦鮮蝦干貝燉飯與黑胡椒淡菜。</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg flex flex-col justify-between hover:border-amber-500/50 transition">
+                        <div class="space-y-2">
+                            <div class="flex items-start justify-between">
+                                <h4 class="font-bold text-white text-base sm:text-lg flex items-center">
+                                    <i class="fa-solid fa-bread-slice text-amber-400 mr-2.5 text-xl"></i>Focacceria Revello
+                                </h4>
+                                <span class="bg-slate-700 text-slate-200 text-xs px-2 py-0.5 rounded">€1–10</span>
+                            </div>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">超人氣烘焙坊與散步小吃，必吃雷科起司佛卡夏 (Focaccia di Recco)。</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg flex flex-col justify-between hover:border-amber-500/50 transition">
+                        <div class="space-y-2">
+                            <div class="flex items-start justify-between">
+                                <h4 class="font-bold text-white text-base sm:text-lg flex items-center">
+                                    <i class="fa-solid fa-bowl-food text-amber-400 mr-2.5 text-xl"></i>Pasta Fresca Fiorella
+                                </h4>
+                                <span class="bg-slate-700 text-slate-200 text-xs px-2 py-0.5 rounded">€1–10</span>
+                            </div>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">評價極高的手工義大利麵店，必嚐青醬特飛麵 (Trofie al Pesto)。</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg flex flex-col justify-between hover:border-amber-500/50 transition">
+                        <div class="space-y-2">
+                            <div class="flex items-start justify-between">
+                                <h4 class="font-bold text-white text-base sm:text-lg flex items-center">
+                                    <i class="fa-solid fa-ice-cream text-pink-400 mr-2.5 text-xl"></i>Latterie 1978 & Cremeria
+                                </h4>
+                                <span class="bg-slate-700 text-slate-200 text-xs px-2 py-0.5 rounded">甜點冰品</span>
+                            </div>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">極高評價 Gelato 店！牛奶、黑櫻桃、開心果，與 Paradiso 現打果汁冰淇淋。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center text-xs text-slate-500 border-t border-slate-800 pt-4 mt-auto">
+                <span>Slide 7 of 12 — Camogli Highlights</span>
+                <button onclick="nextSlide()" class="text-amber-400 hover:underline font-semibold">下一張：City 2 聖瑪格麗塔 SML 絕美海岸 <i class="fa-solid fa-arrow-right ml-1"></i></button>
+            </div>
+        </section>
+
+
+        <!-- SLIDE 8: City 2 Santa Margherita Ligure -->
+        <section id="slide-7" class="slide-card slide-transition ppt-slide bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative mb-12 hidden">
+            <div class="flex flex-col sm:flex-row justify-between sm:items-center border-b border-slate-800 pb-4 mb-6">
+                <div>
+                    <span class="text-xs font-bold text-blue-400 tracking-widest uppercase">Slide 08 ｜ City 2</span>
+                    <h2 class="text-2xl sm:text-3xl font-serifTC font-bold text-white">聖瑪格麗塔-利古雷 (Santa Margherita Ligure)</h2>
+                    <p class="text-xs text-slate-400 mt-1">經典蔚藍度假勝地 ｜ 9/21 - 9/25 期間專屬探秘</p>
+                </div>
+                <span class="text-xs bg-blue-500/20 text-blue-300 px-3.5 py-1.5 rounded-full border border-blue-500/30 font-semibold">專屬探秘景點</span>
+            </div>
+
+            <div class="my-auto grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch flex-1">
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg flex flex-col justify-between hover:border-blue-500/50 transition">
+                        <div class="space-y-2">
+                            <div class="flex items-start justify-between">
+                                <h4 class="font-bold text-white text-base sm:text-lg flex items-center">
+                                    <i class="fa-solid fa-map-pin text-blue-400 mr-2.5 text-xl"></i>聖瑪格麗塔小鎮
+                                </h4>
+                                <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold px-2 py-0.5 rounded">免費漫步</span>
+                            </div>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">提供極佳交通便利性，此處也是搭乘 782 號公車前往波托菲諾的轉乘點。</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg flex flex-col justify-between hover:border-blue-500/50 transition">
+                        <div class="space-y-2">
+                            <div class="flex items-start justify-between">
+                                <h4 class="font-bold text-white text-base sm:text-lg flex items-center">
+                                    <i class="fa-solid fa-tree-city text-amber-400 mr-2.5 text-xl"></i>杜拉佐別墅
+                                </h4>
+                                <span class="bg-slate-700 text-slate-200 text-xs px-2 py-0.5 rounded">門票 €6.00</span>
+                            </div>
+                            <div class="text-xs text-amber-300/80 font-mono">Villa Durazzo</div>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">擁有美麗陽光庭園與貴族裝潢的歷史別墅，俯瞰海灣美景。</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg flex flex-col justify-between hover:border-blue-500/50 transition">
+                        <div class="space-y-2">
+                            <div class="flex items-start justify-between">
+                                <h4 class="font-bold text-white text-base sm:text-lg flex items-center">
+                                    <i class="fa-solid fa-umbrella-beach text-teal-400 mr-2.5 text-xl"></i>帕拉吉海灘
+                                </h4>
+                                <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold px-2 py-0.5 rounded">免費</span>
+                            </div>
+                            <div class="text-xs text-amber-300/80 font-mono">Spiaggia Paraggi</div>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">以迷人的翡翠綠清澈海水聞名，也可選擇至博塞蒂俱樂部享受陽光。</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg flex flex-col justify-between hover:border-blue-500/50 transition">
+                        <div class="space-y-2">
+                            <div class="flex items-start justify-between">
+                                <h4 class="font-bold text-white text-base sm:text-lg flex items-center">
+                                    <i class="fa-solid fa-dog text-amber-400 mr-2.5 text-xl"></i>汪汪海灘
+                                </h4>
+                                <span class="bg-slate-700 text-slate-300 text-xs px-2 py-0.5 rounded">公共海灘</span>
+                            </div>
+                            <div class="text-xs text-amber-300/80 font-mono">Bau Bau Beach</div>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">特色是可帶狗入住 (寵物友善) 的公共海灘，氣氛溫馨悠閒。</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg flex flex-col justify-between hover:border-blue-500/50 transition">
+                        <div class="space-y-2">
+                            <div class="flex items-start justify-between">
+                                <h4 class="font-bold text-white text-base sm:text-lg flex items-center">
+                                    <i class="fa-solid fa-leaf text-emerald-400 mr-2.5 text-xl"></i>馬爾切利亞公園
+                                </h4>
+                                <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold px-2 py-0.5 rounded">免費</span>
+                            </div>
+                            <div class="text-xs text-amber-300/80 font-mono">Parco del Malceglia</div>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">鄰近城鎮的美麗綠地公園，是享受綠意與寧靜放鬆的絕佳去處。</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg flex flex-col justify-between hover:border-blue-500/50 transition">
+                        <div class="space-y-2">
+                            <div class="flex items-start justify-between">
+                                <h4 class="font-bold text-white text-base sm:text-lg flex items-center">
+                                    <i class="fa-solid fa-cookie text-amber-400 mr-2.5 text-xl"></i>皮納蒙蒂烘焙坊
+                                </h4>
+                                <span class="bg-slate-700 text-slate-200 text-xs px-2 py-0.5 rounded">€1–10</span>
+                            </div>
+                            <div class="text-xs text-amber-300/80 font-mono">Pinamonti Focacceria</div>
+                            <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">評價高達 4.5 顆星，提供多種口味佛卡夏與道地甜點糕餅。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 rounded-2xl overflow-hidden border border-slate-700 relative min-h-[340px] flex flex-col justify-end p-6">
+                    <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1000&q=80" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent"></div>
+                    <div class="relative z-10">
+                        <span class="text-xs uppercase font-bold bg-blue-500 text-slate-950 px-2.5 py-1 rounded">Santa Margherita</span>
+                        <h3 class="text-xl font-bold text-white mt-2">蔚藍海岸度假明珠</h3>
+                        <p class="text-xs sm:text-sm text-slate-200 mt-1.5 leading-relaxed">沿海濱大道散步，感受高級度假勝地的愜意陽光。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center text-xs text-slate-500 border-t border-slate-800 pt-4 mt-auto">
+                <span>Slide 8 of 12 — Santa Margherita Ligure</span>
+                <button onclick="nextSlide()" class="text-amber-400 hover:underline font-semibold">下一張：City 3 波托菲諾 Portofino 奢華秘境 <i class="fa-solid fa-arrow-right ml-1"></i></button>
+            </div>
+        </section>
+
+
+        <!-- SLIDE 9: City 3 Portofino & Riviera -->
+        <section id="slide-8" class="slide-card slide-transition ppt-slide bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative mb-12 hidden">
+            <div class="flex flex-col sm:flex-row justify-between sm:items-center border-b border-slate-800 pb-4 mb-6">
+                <div>
+                    <span class="text-xs font-bold text-indigo-400 tracking-widest uppercase">Slide 09 ｜ City 3</span>
+                    <h2 class="text-2xl sm:text-3xl font-serifTC font-bold text-white">波托菲諾與周邊海岸秘境 (Portofino & Riviera)</h2>
+                    <p class="text-xs text-slate-400 mt-1">奢華與深度探索 ｜ 9/21 - 9/25 期間專屬探秘</p>
+                </div>
+                <span class="text-xs bg-indigo-500/20 text-indigo-300 px-3.5 py-1.5 rounded-full border border-indigo-500/30 font-semibold">天堂灣奢華港灣</span>
+            </div>
+
+            <div class="my-auto space-y-5 flex-1 flex flex-col justify-between">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                    <!-- Featured Riviera & Portofino Photos Column -->
+                    <div class="lg:col-span-5 grid grid-rows-2 gap-4 min-h-[360px]">
+                        <div class="relative rounded-2xl overflow-hidden border border-slate-700 shadow-xl bg-slate-900 flex flex-col justify-end p-5 group">
+                            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80" alt="Portofino Harbor" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                            <div class="relative z-10 text-left">
+                                <span class="bg-indigo-500 text-slate-950 text-xs font-bold px-2.5 py-0.5 rounded uppercase">Portofino Harbor</span>
+                                <h3 class="text-base font-bold text-white mt-1.5"><i class="fa-solid fa-anchor text-amber-400 mr-1.5"></i> 波托菲諾港灣與奢華遊艇</h3>
+                                <p class="text-xs text-slate-300">La Piazzetta & Portofino Harbor</p>
+                            </div>
+                        </div>
+
+                        <div class="relative rounded-2xl overflow-hidden border border-slate-700 shadow-xl bg-slate-900 flex flex-col justify-end p-5 group">
+                            <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1000&q=80" alt="Liguria Riviera Coastline" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                            <div class="relative z-10 text-left">
+                                <span class="bg-teal-500 text-slate-950 text-xs font-bold px-2.5 py-0.5 rounded uppercase">Riviera Coast</span>
+                                <h3 class="text-base font-bold text-white mt-1.5"><i class="fa-solid fa-compass text-amber-400 mr-1.5"></i> 韋內雷港與蔚藍海岸秘境</h3>
+                                <p class="text-xs text-slate-300">Porto Venere & Coastal Scenery</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Attraction Cards Grid Column -->
+                    <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg space-y-2 hover:border-indigo-500/50 transition flex flex-col justify-between">
+                            <div class="space-y-1.5">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-white text-base sm:text-lg flex items-center"><i class="fa-solid fa-gem text-indigo-400 mr-2.5 text-xl"></i>波托菲諾小廣場與教堂</h4>
+                                    <span class="text-emerald-400 text-xs font-bold">免費</span>
+                                </div>
+                                <div class="text-xs text-amber-300/80 font-mono">La Piazzetta & San Martino</div>
+                                <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">漫步小廣場欣賞奢華遊艇，並參觀聖馬丁教堂 (Chiesa di San Martino)。</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg space-y-2 hover:border-indigo-500/50 transition flex flex-col justify-between">
+                            <div class="space-y-1.5">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-white text-base sm:text-lg flex items-center"><i class="fa-solid fa-heart text-rose-400 mr-2.5 text-xl"></i>親吻步道</h4>
+                                    <span class="text-slate-400 text-xs">約 2 km</span>
+                                </div>
+                                <div class="text-xs text-amber-300/80 font-mono">Passeggiata dei Baci</div>
+                                <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">從帕拉吉海灘漫步至波托菲諾的絕美沿海步道 (約 25 分鐘)。</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg space-y-2 hover:border-indigo-500/50 transition flex flex-col justify-between">
+                            <div class="space-y-1.5">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-white text-base sm:text-lg flex items-center"><i class="fa-solid fa-camera-retro text-amber-400 mr-2.5 text-xl"></i>卡農灣</h4>
+                                    <span class="text-emerald-400 text-xs font-bold">明信片地標</span>
+                                </div>
+                                <div class="text-xs text-amber-300/80 font-mono">Baia Cannone</div>
+                                <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">擁有標誌性的「金色別墅」，是波托菲諾最具代表性的海灣與游泳點。</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg space-y-2 hover:border-indigo-500/50 transition flex flex-col justify-between">
+                            <div class="space-y-1.5">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-white text-base sm:text-lg flex items-center"><i class="fa-solid fa-monument text-amber-400 mr-2.5 text-xl"></i>布朗城堡 & 公園博物館</h4>
+                                    <span class="text-slate-300 text-xs bg-slate-700 px-2 py-0.5 rounded">門票 €5.00</span>
+                                </div>
+                                <div class="text-xs text-amber-300/80 font-mono">Castello Brown & Museo del Parco</div>
+                                <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">攻頂俯瞰整座海灣；博物館展出當代雕塑與海濱藝術創作。</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg space-y-2 hover:border-indigo-500/50 transition flex flex-col justify-between">
+                            <div class="space-y-1.5">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-white text-base sm:text-lg flex items-center"><i class="fa-solid fa-lighthouse text-amber-400 mr-2.5 text-xl"></i>波托菲諾燈塔</h4>
+                                    <span class="text-emerald-400 text-xs font-bold">週三公休</span>
+                                </div>
+                                <div class="text-xs text-amber-300/80 font-mono">Faro di Portofino</div>
+                                <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">沿著步道健行至半島最底端，享受海天一色的無敵日落美景。</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg space-y-2 hover:border-indigo-500/50 transition flex flex-col justify-between">
+                            <div class="space-y-1.5">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-white text-base sm:text-lg flex items-center"><i class="fa-solid fa-compass text-amber-400 mr-2.5 text-xl"></i>韋內雷港、切爾沃 & 市集</h4>
+                                    <span class="text-slate-400 text-xs">週四市集</span>
+                                </div>
+                                <div class="text-xs text-amber-300/80 font-mono">Porto Venere, Cervo & Rapallo Market</div>
+                                <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">韋內雷港聖彼得教堂與拜倫洞穴；週四早晨拉帕洛大型皮件亞麻市集。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-5 bg-slate-800/90 rounded-2xl border border-slate-700 text-xs sm:text-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+                    <div class="font-bold text-amber-400 text-base flex items-center">
+                        <i class="fa-solid fa-wine-glass mr-2.5 text-xl"></i>波托菲諾專屬美饌推薦:
+                    </div>
+                    <div class="flex flex-wrap gap-2 text-slate-200 text-xs sm:text-sm font-medium">
+                        <span class="bg-slate-900 border border-slate-700 px-3 py-1.5 rounded-xl">Gelateria Gepi (冰淇淋)</span>
+                        <span class="bg-slate-900 border border-slate-700 px-3 py-1.5 rounded-xl">Al Faro Bar (酒吧)</span>
+                        <span class="bg-slate-900 border border-slate-700 px-3 py-1.5 rounded-xl">Caffè Excelsior</span>
+                        <span class="bg-slate-900 border border-slate-700 px-3 py-1.5 rounded-xl">Ö Magazín</span>
+                        <span class="bg-slate-900 border border-slate-700 px-3 py-1.5 rounded-xl">Capo Nord</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center text-xs text-slate-500 border-t border-slate-800 pt-4 mt-auto">
+                <span>Slide 9 of 12 — Portofino & Riviera</span>
+                <button onclick="nextSlide()" class="text-amber-400 hover:underline font-semibold">下一張：City 4 佛羅倫斯 Firenze 藝術之旅 <i class="fa-solid fa-arrow-right ml-1"></i></button>
+            </div>
+        </section>
+
+
+        <!-- SLIDE 10: City 4 Florence (Firenze) -->
+        <section id="slide-9" class="slide-card slide-transition ppt-slide bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative mb-12 hidden">
+            <div class="flex flex-col sm:flex-row justify-between sm:items-center border-b border-slate-800 pb-4 mb-6">
+                <div>
+                    <span class="text-xs font-bold text-amber-400 tracking-widest uppercase">Slide 10 ｜ City 4</span>
+                    <h2 class="text-2xl sm:text-3xl font-serifTC font-bold text-white">佛羅倫斯 (Firenze)｜9/25 - 9/29</h2>
+                    <p class="text-xs text-slate-400 mt-1">文藝復興藝術殿堂 ｜ 托斯卡尼陽光莊園專屬一日遊與歷史名勝美食</p>
+                </div>
+                <span class="text-xs bg-amber-500/20 text-amber-300 px-3.5 py-1.5 rounded-full border border-amber-500/30 font-semibold">4 晚住宿基地</span>
+            </div>
+
+            <div class="my-auto grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch flex-1">
+                <div class="lg:col-span-5 rounded-2xl overflow-hidden border border-slate-700 relative min-h-[380px] flex flex-col justify-end p-6">
+                    <img src="https://images.unsplash.com/photo-1543429776-2782fc8e1acd?auto=format&fit=crop&w=1000&q=80" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                    <div class="relative z-10 space-y-2">
+                        <span class="text-xs uppercase font-bold bg-amber-500 text-slate-950 px-2.5 py-1 rounded">Renaissance Capital</span>
+                        <h3 class="text-xl font-bold text-white">文藝復興的搖籃</h3>
+                        <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                            漫步大教堂廣場、舊宮與老橋。傍晚登上米開朗基羅廣場俯瞰全城絕美夕陽。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                    <div class="p-5 sm:p-6 rounded-2xl bg-amber-500/10 border border-amber-500/40 shadow-lg space-y-2 hover:border-amber-400 transition">
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-amber-300 text-base sm:text-lg flex items-center"><i class="fa-solid fa-palette mr-2 text-amber-400"></i>[9/26] 烏菲茲 & 學院美術館</h4>
+                            <span class="text-xs font-mono bg-amber-500/20 text-amber-200 px-2 py-0.5 rounded font-bold">08:15 預約</span>
+                        </div>
+                        <p class="text-slate-200 text-xs sm:text-sm leading-relaxed">
+                            憑電子票入場 (PNR: <strong class="text-amber-300 font-mono">8RZCTYEW</strong>)。賞波提且利《維納斯的誕生》與達文西名畫。順訪學院美術館朝聖原版《大衛像》。
+                        </p>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-teal-500/10 border border-teal-500/40 shadow-lg space-y-2 hover:border-teal-400 transition">
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-teal-300 text-base sm:text-lg flex items-center"><i class="fa-solid fa-bus mr-2 text-teal-400"></i>[9/28] 托斯卡尼一日遊</h4>
+                            <span class="text-xs font-mono bg-teal-500/20 text-teal-200 px-2 py-0.5 rounded font-bold">07:30 集合</span>
+                        </div>
+                        <p class="text-slate-200 text-xs sm:text-sm leading-relaxed">
+                            憑證: <strong class="text-teal-300 font-mono">GYG48YL6RV8V</strong>。集合於 Villa Costanza (搭 T1 電車直達)。遊歷 Siena、Chianti 酒莊午餐、San Gimignano、Pisa。
+                        </p>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg space-y-2 hover:border-amber-500/50 transition">
+                        <h4 class="font-bold text-white text-base sm:text-lg flex items-center"><i class="fa-solid fa-church text-amber-400 mr-2"></i>聖母百花大教堂區</h4>
+                        <p class="text-slate-200 text-xs sm:text-sm leading-relaxed">
+                            聖母百花大教堂、攀登布魯內萊斯基穹頂、喬托鐘樓與洗禮堂天堂之門。
+                        </p>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg space-y-2 hover:border-amber-500/50 transition">
+                        <h4 class="font-bold text-white text-base sm:text-lg flex items-center"><i class="fa-solid fa-landmark text-amber-400 mr-2"></i>舊宮、領主廣場與聖十字</h4>
+                        <p class="text-slate-200 text-xs sm:text-sm leading-relaxed">
+                            參觀舊宮與領主廣場。漫步至聖十字區造訪安葬伽利略與米開朗基羅的聖十字聖殿。
+                        </p>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg space-y-2 hover:border-amber-500/50 transition">
+                        <h4 class="font-bold text-white text-base sm:text-lg flex items-center"><i class="fa-solid fa-tree text-emerald-400 mr-2"></i>碧提宮、波波里與巴爾迪尼花園</h4>
+                        <p class="text-slate-200 text-xs sm:text-sm leading-relaxed">
+                            麥地奇皇宮與波波里花園（含於烏菲茲 5 日券）；巴爾迪尼花園賞紫藤與全景視野。
+                        </p>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg space-y-2 hover:border-amber-500/50 transition">
+                        <h4 class="font-bold text-white text-base sm:text-lg flex items-center"><i class="fa-solid fa-shield-halved text-amber-400 mr-2"></i>史蒂伯特 & SMN百年藥妝</h4>
+                        <p class="text-slate-200 text-xs sm:text-sm leading-relaxed">
+                            史蒂伯特博物館展示騎士盔甲；造訪全球最古老的 SMN 百年修道院藥妝店。
+                        </p>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg space-y-2 hover:border-amber-500/50 transition sm:col-span-2">
+                        <h4 class="font-bold text-white text-base sm:text-lg flex items-center"><i class="fa-solid fa-utensils text-rose-400 mr-2"></i>老橋、集市與美食特輯</h4>
+                        <p class="text-slate-200 text-xs sm:text-sm leading-relaxed">
+                            老橋 (Ponte Vecchio) 散步；新市場摸青銅小豬；中央市場採買。<strong>必吃餐廳：</strong>Vivoli II gelato 阿芙佳朵；Trattoria Mario / Zà Zà 正宗丁骨牛排；Caffè Lietta 道地義式咖啡與糕點。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center text-xs text-slate-500 border-t border-slate-800 pt-4 mt-auto">
+                <span>Slide 10 of 12 — Florence & Tuscany</span>
+                <button onclick="nextSlide()" class="text-amber-400 hover:underline font-semibold">下一張：City 5 米蘭 Milano & 瑞士伯爾尼納快車 <i class="fa-solid fa-arrow-right ml-1"></i></button>
+            </div>
+        </section>
+
+
+        <!-- SLIDE 11: City 5 Milan (Milano) & Bernina Express -->
+        <section id="slide-10" class="slide-card slide-transition ppt-slide bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative mb-12 hidden">
+            <div class="flex flex-col sm:flex-row justify-between sm:items-center border-b border-slate-800 pb-4 mb-6">
+                <div>
+                    <span class="text-xs font-bold text-purple-400 tracking-widest uppercase">Slide 11 ｜ City 5</span>
+                    <h2 class="text-2xl sm:text-3xl font-serifTC font-bold text-white">米蘭 (Milano) & 瑞士伯爾尼納快車｜9/29 - 10/2</h2>
+                    <p class="text-xs text-slate-400 mt-1">時尚與藝術終極殿堂 ｜ 跨國阿爾卑斯冰川全景列車與古堡畫廊</p>
+                </div>
+                <span class="text-xs bg-purple-500/20 text-purple-300 px-3.5 py-1.5 rounded-full border border-purple-500/30 font-semibold">3 晚住宿基地</span>
+            </div>
+
+            <div class="my-auto grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch flex-1">
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                    <div class="p-5 sm:p-6 rounded-2xl bg-purple-500/10 border border-purple-500/40 shadow-lg space-y-2 sm:col-span-2 hover:border-purple-400 transition">
+                        <div class="flex justify-between items-start">
+                            <h4 class="font-bold text-purple-300 text-base sm:text-lg flex items-center"><i class="fa-solid fa-train-subway text-purple-400 mr-2.5 text-xl"></i>[9/30] 瑞士伯爾尼納快車之旅 (Bernina Express)</h4>
+                            <span class="text-xs font-mono bg-purple-500/20 text-purple-200 px-2.5 py-1 rounded font-bold">06:45 集合</span>
+                        </div>
+                        <p class="text-slate-200 text-xs sm:text-sm leading-relaxed">
+                            憑證: <strong class="text-purple-300 font-mono">GYG7VKRZNBMX</strong>。集合點：Piazza della Repubblica 5A (M3 號線 Repubblica 站，Turati 路轉角)。務必攜帶護照。全景車廂座位 + Diavolezza 傳統蕎麥麵午餐。
+                        </p>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg space-y-2 hover:border-purple-500/50 transition">
+                        <h4 class="font-bold text-white text-base sm:text-lg flex items-center"><i class="fa-solid fa-paintbrush text-amber-400 mr-2.5 text-xl"></i>布雷拉畫廊</h4>
+                        <div class="text-xs text-amber-300/80 font-mono">Pinacoteca di Brera & Palazzo Citterio</div>
+                        <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">
+                            典藏拉斐爾《聖母的婚禮》、卡拉瓦喬《以馬忤斯的晚餐》與阿耶茲名畫《吻》。可購買奇特里奧宮聯票。
+                        </p>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg space-y-2 hover:border-purple-500/50 transition">
+                        <h4 class="font-bold text-white text-base sm:text-lg flex items-center"><i class="fa-solid fa-leaf text-emerald-400 mr-2.5 text-xl"></i>布雷拉植物園與圖書館</h4>
+                        <div class="text-xs text-amber-300/80 font-mono">Orto Botanico & Biblioteca</div>
+                        <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">
+                            1775 年建成的寧靜植物園，以及宛如霍格華茲般充滿古老地球儀與巨大的古典圖書館。
+                        </p>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg space-y-2 hover:border-purple-500/50 transition">
+                        <h4 class="font-bold text-white text-base sm:text-lg flex items-center"><i class="fa-solid fa-mug-hot text-amber-400 mr-2.5 text-xl"></i>費南達咖啡廳</h4>
+                        <div class="text-xs text-amber-300/80 font-mono">Caffè Fernanda</div>
+                        <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">
+                            位於畫廊內裝潢極具奢華質感的復古咖啡廳，非常適合在藝術巡禮後享用咖啡。
+                        </p>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-800/90 border border-slate-700/80 shadow-lg space-y-2 hover:border-purple-500/50 transition">
+                        <h4 class="font-bold text-white text-base sm:text-lg flex items-center"><i class="fa-solid fa-landmark-dome text-amber-400 mr-2.5 text-xl"></i>斯福爾扎古堡 & 盎博羅削</h4>
+                        <div class="text-xs text-amber-300/80 font-mono">Sforzesco & Ambrosiana</div>
+                        <p class="text-slate-200 text-xs sm:text-sm leading-relaxed pt-1">
+                            探訪文藝復興時期古堡巨作，與保存達文西手稿的盎博羅削圖書館。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 rounded-2xl overflow-hidden border border-slate-700 relative min-h-[380px] flex flex-col justify-end p-6">
+                    <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1000&q=80" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+                    <div class="relative z-10 space-y-2">
+                        <span class="text-xs uppercase font-bold bg-purple-500 text-slate-950 px-2.5 py-1 rounded">Alpine Express</span>
+                        <h3 class="text-xl font-bold text-white">阿爾卑斯冰川絕景</h3>
+                        <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                            搭乘紅色伯爾尼納快車穿越跨國隘口與莫特拉奇冰川，體驗世界遺產鐡道傳奇。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center text-xs text-slate-500 border-t border-slate-800 pt-4 mt-auto">
+                <span>Slide 11 of 12 — Milan & Bernina Express</span>
+                <button onclick="nextSlide()" class="text-amber-400 hover:underline font-semibold">下一張：專屬景點詳細資訊總表 <i class="fa-solid fa-arrow-right ml-1"></i></button>
+            </div>
+        </section>
+
+
+        <!-- SLIDE 12: Master List -->
+        <section id="slide-11" class="slide-card slide-transition ppt-slide bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative mb-12 hidden">
+            <div class="flex flex-col sm:flex-row justify-between sm:items-center border-b border-slate-800 pb-4 mb-4">
+                <div>
+                    <span class="text-xs font-bold text-amber-400 tracking-widest uppercase">Slide 12 ｜ Master Database</span>
+                    <h2 class="text-2xl sm:text-3xl font-serifTC font-bold text-white">專屬景點詳細資訊總表 (Master List - 完整收錄版)</h2>
+                </div>
+                <!-- Interactive Search & Filter Inputs -->
+                <div class="mt-3 sm:mt-0 flex items-center space-x-2">
+                    <input type="text" id="tableSearchInput" onkeyup="filterMasterTable()" placeholder="搜尋景點、餐廳或關鍵字..." class="bg-slate-950 border border-slate-700 text-xs text-white rounded-xl px-3 py-2 focus:outline-none focus:ring-1 focus:ring-amber-500">
+                    <select id="cityFilterSelect" onchange="filterMasterTable()" class="bg-slate-950 border border-slate-700 text-xs text-amber-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-1 focus:ring-amber-500">
+                        <option value="ALL">所有城市</option>
+                        <option value="卡莫利">卡莫利</option>
+                        <option value="聖瑪格麗塔">聖瑪格麗塔</option>
+                        <option value="波托菲諾">波托菲諾與海岸</option>
+                        <option value="佛羅倫斯">佛羅倫斯</option>
+                        <option value="米蘭">米蘭</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="my-auto overflow-x-auto rounded-2xl border border-slate-800 max-h-[580px] overflow-y-auto">
+                <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                    <thead class="sticky top-0 bg-slate-800 text-slate-300 border-b border-slate-700 z-10">
+                        <tr>
+                            <th class="py-3 px-4 font-semibold">城市</th>
+                            <th class="py-3 px-4 font-semibold">景點 / 餐廳名稱</th>
+                            <th class="py-3 px-4 font-semibold">詳細地址 / 集合點</th>
+                            <th class="py-3 px-4 font-semibold">營業時間</th>
+                            <th class="py-3 px-4 font-semibold">門票預估 / 均消</th>
+                        </tr>
+                    </thead>
+                    <tbody id="masterTableBody" class="divide-y divide-slate-800/80 text-slate-300">
+                        <!-- Camogli Items -->
+                        <tr data-city="卡莫利" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-teal-400">卡莫利</td>
+                            <td class="py-2.5 px-4 font-medium text-white">德拉戈納拉城堡 (Castello Della Dragonara)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via Isola, 25, 16032 Camogli</td>
+                            <td class="py-2.5 px-4">依現場/展覽而定</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">未標示</td>
+                        </tr>
+                        <tr data-city="卡莫利" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-teal-400">卡莫利</td>
+                            <td class="py-2.5 px-4 font-medium text-white">聖母升天聖殿 (Basilica di Santa Maria Assunta)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via Isola, 19, 16032 Camogli</td>
+                            <td class="py-2.5 px-4">全天開放</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費</td>
+                        </tr>
+                        <tr data-city="卡莫利" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-teal-400">卡莫利</td>
+                            <td class="py-2.5 px-4 font-medium text-white">海事博物館 (Civico Museo Marinaro)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via Gio Bono Ferrari, 42, 16032 Camogli</td>
+                            <td class="py-2.5 px-4">09:50 開始營業</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">未標示</td>
+                        </tr>
+                        <tr data-city="卡莫利" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-teal-400">卡莫利</td>
+                            <td class="py-2.5 px-4 font-medium text-white">聖弗羅托索修道院 (Abbazia di San Fruttuoso)</td>
+                            <td class="py-2.5 px-4 text-slate-400">波托菲諾國家公園內 (無車道)</td>
+                            <td class="py-2.5 px-4">日間開放</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">渡輪往返 €17</td>
+                        </tr>
+                        <tr data-city="卡莫利" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-teal-400">卡莫利</td>
+                            <td class="py-2.5 px-4 font-medium text-white">La Camogliese 海鮮餐廳</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via Giuseppe Garibaldi, 76, 16032 Camogli</td>
+                            <td class="py-2.5 px-4">12:30 開始營業</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">€30 - 40</td>
+                        </tr>
+                        <tr data-city="卡莫利" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-teal-400">卡莫利</td>
+                            <td class="py-2.5 px-4 font-medium text-white">Pasta Fresca Fiorella 手工義大利麵</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via Giuseppe Garibaldi, 189, 16032 Camogli</td>
+                            <td class="py-2.5 px-4">一至四 08:30-17:00 (五六日休)</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">€1 - 10</td>
+                        </tr>
+                        <tr data-city="卡莫利" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-teal-400">卡莫利</td>
+                            <td class="py-2.5 px-4 font-medium text-white">Focacceria Revello 起司佛卡夏</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via Giuseppe Garibaldi, 183, 16032 Camogli</td>
+                            <td class="py-2.5 px-4">08:00 開始營業</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">€1 - 10</td>
+                        </tr>
+                        <tr data-city="卡莫利" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-teal-400">卡莫利</td>
+                            <td class="py-2.5 px-4 font-medium text-white">Latterie 1978 乳品冰淇淋店</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via Scalo, 3, 16032 Camogli</td>
+                            <td class="py-2.5 px-4">11:15 開始營業</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">未標示</td>
+                        </tr>
+                        <tr data-city="卡莫利" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-teal-400">卡莫利</td>
+                            <td class="py-2.5 px-4 font-medium text-white">La Cremeria del Paradiso 冰淇淋</td>
+                            <td class="py-2.5 px-4 text-slate-400">Piazza C. Colombo, 4/5, 16032 Camogli</td>
+                            <td class="py-2.5 px-4">10:00 開始營業</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">未標示</td>
+                        </tr>
+
+                        <!-- Santa Margherita Items -->
+                        <tr data-city="聖瑪格麗塔" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-blue-400">聖瑪格麗塔</td>
+                            <td class="py-2.5 px-4 font-medium text-white">聖瑪格麗塔-利古雷小鎮 (Santa Margherita Ligure)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Santa Margherita Ligure (782公車轉乘點)</td>
+                            <td class="py-2.5 px-4">全天開放</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費</td>
+                        </tr>
+                        <tr data-city="聖瑪格麗塔" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-blue-400">聖瑪格麗塔</td>
+                            <td class="py-2.5 px-4 font-medium text-white">杜拉佐別墅 (Villa Durazzo)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via S. Francesco D'Assisi, 3, 16038 SML</td>
+                            <td class="py-2.5 px-4">09:30-13:00 / 14:00-18:00</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">€6.00</td>
+                        </tr>
+                        <tr data-city="聖瑪格麗塔" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-blue-400">聖瑪格麗塔</td>
+                            <td class="py-2.5 px-4 font-medium text-white">帕拉吉海灘 (Spiaggia Paraggi)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via Duca degli Abruzzi, 62, 16034 Portofino</td>
+                            <td class="py-2.5 px-4">全天開放</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費</td>
+                        </tr>
+                        <tr data-city="聖瑪格麗塔" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-blue-400">聖瑪格麗塔</td>
+                            <td class="py-2.5 px-4 font-medium text-white">汪汪海灘 (Bau Bau Beach)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Strada Provinciale 227 di Portofino, 6C</td>
+                            <td class="py-2.5 px-4">09:00 開始營業</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費</td>
+                        </tr>
+                        <tr data-city="聖瑪格麗塔" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-blue-400">聖瑪格麗塔</td>
+                            <td class="py-2.5 px-4 font-medium text-white">馬爾切利亞公園 (Parco del Malceglia)</td>
+                            <td class="py-2.5 px-4 text-slate-400">鄰近 Santa Margherita Ligure</td>
+                            <td class="py-2.5 px-4">全天開放</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費</td>
+                        </tr>
+                        <tr data-city="聖瑪格麗塔" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-blue-400">聖瑪格麗塔</td>
+                            <td class="py-2.5 px-4 font-medium text-white">皮納蒙蒂佛卡夏烘焙坊 (Pinamonti Focacceria)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Largo Giovanni Amendola, 15, 16038 SML</td>
+                            <td class="py-2.5 px-4">營業至 13:30</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">€1 - 10</td>
+                        </tr>
+
+                        <!-- Portofino & Riviera Items -->
+                        <tr data-city="波托菲諾" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-indigo-400">波托菲諾與海岸</td>
+                            <td class="py-2.5 px-4 font-medium text-white">波托菲諾小廣場 (La Piazzetta)</td>
+                            <td class="py-2.5 px-4 text-slate-400">港口核心區域</td>
+                            <td class="py-2.5 px-4">全天開放</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費</td>
+                        </tr>
+                        <tr data-city="波托菲諾" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-indigo-400">波托菲諾與海岸</td>
+                            <td class="py-2.5 px-4 font-medium text-white">聖馬丁教堂 (Chiesa di San Martino)</td>
+                            <td class="py-2.5 px-4 text-slate-400">波托菲諾鎮內</td>
+                            <td class="py-2.5 px-4">日間開放</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費</td>
+                        </tr>
+                        <tr data-city="波托菲諾" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-indigo-400">波托菲諾與海岸</td>
+                            <td class="py-2.5 px-4 font-medium text-white">親吻步道 (Passeggiata dei Baci)</td>
+                            <td class="py-2.5 px-4 text-slate-400">帕拉吉海灘至波托菲諾 (約2km)</td>
+                            <td class="py-2.5 px-4">全天開放</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費</td>
+                        </tr>
+                        <tr data-city="波托菲諾" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-indigo-400">波托菲諾與海岸</td>
+                            <td class="py-2.5 px-4 font-medium text-white">卡農灣 (Baia Cannone)</td>
+                            <td class="py-2.5 px-4 text-slate-400">波托菲諾海岸 (金色別墅地標)</td>
+                            <td class="py-2.5 px-4">全天開放</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費</td>
+                        </tr>
+                        <tr data-city="波托菲諾" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-indigo-400">波托菲諾與海岸</td>
+                            <td class="py-2.5 px-4 font-medium text-white">布朗城堡 (Castello Brown)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via alla Penisola, 13, 16034 Portofino</td>
+                            <td class="py-2.5 px-4">10:00 - 20:30</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">€5.00</td>
+                        </tr>
+                        <tr data-city="波托菲諾" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-indigo-400">波托菲諾與海岸</td>
+                            <td class="py-2.5 px-4 font-medium text-white">波托菲諾燈塔 (Faro di Portofino)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via alla Penisola, 16034 Portofino</td>
+                            <td class="py-2.5 px-4">10:30-16:30 (週三休息)</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費</td>
+                        </tr>
+                        <tr data-city="波托菲諾" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-indigo-400">波托菲諾與海岸</td>
+                            <td class="py-2.5 px-4 font-medium text-white">公園博物館 (Museo del Parco)</td>
+                            <td class="py-2.5 px-4 text-slate-400">波托菲諾海濱</td>
+                            <td class="py-2.5 px-4">10:00-20:00 (週二休館)</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">€5.00</td>
+                        </tr>
+                        <tr data-city="波托菲諾" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-indigo-400">波托菲諾與海岸</td>
+                            <td class="py-2.5 px-4 font-medium text-white">傑皮義式冰淇淋店 (Gelateria Gepi)</td>
+                            <td class="py-2.5 px-4 text-slate-400">波托菲諾鎮內</td>
+                            <td class="py-2.5 px-4">營業中</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">€3 - 10</td>
+                        </tr>
+                        <tr data-city="波托菲諾" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-indigo-400">波托菲諾與海岸</td>
+                            <td class="py-2.5 px-4 font-medium text-white">法羅海景酒吧 (Al Faro Bar)</td>
+                            <td class="py-2.5 px-4 text-slate-400">波托菲諾燈塔旁</td>
+                            <td class="py-2.5 px-4">依燈塔時間</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">€10 - 25</td>
+                        </tr>
+                        <tr data-city="波托菲諾" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-indigo-400">波托菲諾與海岸</td>
+                            <td class="py-2.5 px-4 font-medium text-white">精益咖啡廳 (Caffè Excelsior)</td>
+                            <td class="py-2.5 px-4 text-slate-400">小廣場旁邊</td>
+                            <td class="py-2.5 px-4">營業中</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">€5 - 15</td>
+                        </tr>
+                        <tr data-city="波托菲諾" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-indigo-400">波托菲諾與海岸</td>
+                            <td class="py-2.5 px-4 font-medium text-white">Ö Magazín 海景餐廳</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via Molo Umberto I, 14, Portofino</td>
+                            <td class="py-2.5 px-4">12:30 開始營業</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">€40 - 80</td>
+                        </tr>
+                        <tr data-city="波托菲諾" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-indigo-400">波托菲諾與海岸</td>
+                            <td class="py-2.5 px-4 font-medium text-white">卡農灣景觀餐廳 (Capo Nord)</td>
+                            <td class="py-2.5 px-4 text-slate-400">卡農灣旁海濱</td>
+                            <td class="py-2.5 px-4">12:30 開始營業</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">€50 - 90</td>
+                        </tr>
+                        <tr data-city="波托菲諾" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-indigo-400">波托菲諾與海岸</td>
+                            <td class="py-2.5 px-4 font-medium text-white">聖彼得教堂 (Chiesa Di San Pietro)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Porto Venere (韋內雷港)</td>
+                            <td class="py-2.5 px-4">全天開放</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費</td>
+                        </tr>
+                        <tr data-city="波托菲諾" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-indigo-400">波托菲諾與海岸</td>
+                            <td class="py-2.5 px-4 font-medium text-white">拜倫洞穴 (Grotta Di Lord Byron)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Porto Venere (韋內雷港)</td>
+                            <td class="py-2.5 px-4">全天開放</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費</td>
+                        </tr>
+                        <tr data-city="波托菲諾" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-indigo-400">波托菲諾與海岸</td>
+                            <td class="py-2.5 px-4 font-medium text-white">切爾沃山城 (Cervo)</td>
+                            <td class="py-2.5 px-4 text-slate-400">近法國邊境山頂村莊</td>
+                            <td class="py-2.5 px-4">全天開放</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費</td>
+                        </tr>
+                        <tr data-city="波托菲諾" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-indigo-400">波托菲諾與海岸</td>
+                            <td class="py-2.5 px-4 font-medium text-white">拉帕洛傳統市集 (Rapallo Market)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Lungomare Vittorio Veneto, Rapallo</td>
+                            <td class="py-2.5 px-4">每週四 08:00–13:00</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費逛集</td>
+                        </tr>
+
+                        <!-- Florence Items -->
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">[9/26] 烏菲茲美術館 (Galleria degli Uffizi)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Piazzale degli Uffizi, 6, Firenze</td>
+                            <td class="py-2.5 px-4">08:15 預約 (PNR: 8RZCTYEW)</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">已預訂 €40/人</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">學院美術館 (Galleria dell'Accademia)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via Ricasoli, 58/60, Firenze</td>
+                            <td class="py-2.5 px-4">08:15-18:50 (週一休)</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">全票 €16.00</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">[9/28] 托斯卡尼一日遊 (Tuscany Tour)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Villa Costanza (T1電車終點站)</td>
+                            <td class="py-2.5 px-4">07:30 集合 (憑證: GYG48YL6RV8V)</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">已預訂 €190 (雙人)</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">聖母百花大教堂 (Duomo di Firenze)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Piazza del Duomo, Firenze</td>
+                            <td class="py-2.5 px-4">10:00 - 16:30</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">教堂免費</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">布魯內萊斯基穹頂 (Cupola Brunelleschi)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Piazza del Duomo, Firenze</td>
+                            <td class="py-2.5 px-4">需預約時段登頂</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">套票包含</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">喬托鐘樓 (Campanile di Giotto)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Piazza del Duomo, Firenze</td>
+                            <td class="py-2.5 px-4">08:15 - 19:00</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">套票包含</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">聖喬瓦尼洗禮堂 (Battistero di San Giovanni)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Piazza del Duomo, Firenze</td>
+                            <td class="py-2.5 px-4">08:30 - 19:30</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">套票包含</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">舊宮 (Palazzo Vecchio)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Piazza della Signoria, Firenze</td>
+                            <td class="py-2.5 px-4">09:00 - 19:00</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">€12.50</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">領主廣場 (Piazza della Signoria)</td>
+                            <td class="py-2.5 px-4 text-slate-400">佛羅倫斯市中心</td>
+                            <td class="py-2.5 px-4">全天開放</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">聖十字聖殿 (Basilica di Santa Croce)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Piazza di Santa Croce, 16, Firenze</td>
+                            <td class="py-2.5 px-4">09:30 - 17:30</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">€8.00</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">老橋 (Ponte Vecchio)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Ponte Vecchio, Firenze</td>
+                            <td class="py-2.5 px-4">全天開放</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">米開朗基羅廣場 (Piazzale Michelangelo)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Piazzale Michelangelo, Firenze</td>
+                            <td class="py-2.5 px-4">全天開放 (夕陽絕景)</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">碧提宮 (Palazzo Pitti)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Piazza de' Pitti, 1, Firenze</td>
+                            <td class="py-2.5 px-4">08:15 - 18:30 (週一休)</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">5日通行證含</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">波波里花園 (Giardino di Boboli)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Piazza de' Pitti, 1, Firenze</td>
+                            <td class="py-2.5 px-4">08:15 - 19:10</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">預估 NT$ 369</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">巴爾迪尼花園 (Giardino Bardini)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Costa S. Giorgio, 2, 50125 Firenze</td>
+                            <td class="py-2.5 px-4">10:00 - 19:30</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">預估 NT$ 369</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">史蒂伯特博物館 (Museo Stibbert)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via Federico Stibbert, 26, Firenze</td>
+                            <td class="py-2.5 px-4">一至三10-14，五至日10-18 (四休)</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">預估 NT$ 443</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">SMN百年修道院藥妝 (Officina Profumo)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via della Scala, 16, 50123 Firenze</td>
+                            <td class="py-2.5 px-4">營業至 20:00</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費進店</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">佛羅倫斯中央市場 (Mercato Centrale)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Piazza del Mercato Centrale, Firenze</td>
+                            <td class="py-2.5 px-4">09:00 - 00:00</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費逛集</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">新市場 / 青銅小豬 (Mercato Nuovo)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Piazza del Mercato Nuovo, Firenze</td>
+                            <td class="py-2.5 px-4">09:00 - 19:00</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">Vivoli II gelato 冰淇淋 (阿芙佳朵)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via Isola delle Stinche, 7r, Firenze</td>
+                            <td class="py-2.5 px-4">營業至 23:00 (週一休)</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">€3 - 10</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">Trattoria Mario 丁骨牛排</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via Rosina, 2r, 50123 Firenze</td>
+                            <td class="py-2.5 px-4">一至四六 12-15，五加開19:30-21</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">均消 €20-30</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">Trattoria Zà Zà 托斯卡尼餐館</td>
+                            <td class="py-2.5 px-4 text-slate-400">Piazza del Mercato Centrale, 26r</td>
+                            <td class="py-2.5 px-4">每日 11:00–23:00</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">均消 €20-30</td>
+                        </tr>
+                        <tr data-city="佛羅倫斯" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-amber-400">佛羅倫斯</td>
+                            <td class="py-2.5 px-4 font-medium text-white">里塔咖啡廳 (Caffè Lietta)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Piazza della Libertà 周邊</td>
+                            <td class="py-2.5 px-4">07:00 - 20:00</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">均消 €5-15</td>
+                        </tr>
+
+                        <!-- Milan Items -->
+                        <tr data-city="米蘭" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-purple-400">米蘭</td>
+                            <td class="py-2.5 px-4 font-medium text-white">[9/30] 伯爾尼納快車之旅 (Bernina Express)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Piazza della Repubblica 5A (Repubblica站)</td>
+                            <td class="py-2.5 px-4">06:45 集合 (07:00 出發)</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">已預訂 €334 (雙人)</td>
+                        </tr>
+                        <tr data-city="米蘭" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-purple-400">米蘭</td>
+                            <td class="py-2.5 px-4 font-medium text-white">布雷拉畫廊 (Pinacoteca di Brera)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via Brera, 28, Milano</td>
+                            <td class="py-2.5 px-4">08:30-19:15 (週一休)</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">全票 €15.00</td>
+                        </tr>
+                        <tr data-city="米蘭" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-purple-400">米蘭</td>
+                            <td class="py-2.5 px-4 font-medium text-white">奇特里奧宮 (Palazzo Citterio)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Via Brera, Milano (布雷拉聯票)</td>
+                            <td class="py-2.5 px-4">依畫廊時間</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">聯票包含</td>
+                        </tr>
+                        <tr data-city="米蘭" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-purple-400">米蘭</td>
+                            <td class="py-2.5 px-4 font-medium text-white">布雷拉植物園 (Orto Botanico di Brera)</td>
+                            <td class="py-2.5 px-4 text-slate-400">布雷拉宮內庭園</td>
+                            <td class="py-2.5 px-4">09:00 - 18:00</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費</td>
+                        </tr>
+                        <tr data-city="米蘭" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-purple-400">米蘭</td>
+                            <td class="py-2.5 px-4 font-medium text-white">布雷拉圖書館 (Biblioteca Braidense)</td>
+                            <td class="py-2.5 px-4 text-slate-400">布雷拉宮內</td>
+                            <td class="py-2.5 px-4">向公眾開放</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">免費參觀</td>
+                        </tr>
+                        <tr data-city="米蘭" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-purple-400">米蘭</td>
+                            <td class="py-2.5 px-4 font-medium text-white">費南達咖啡廳 (Caffè Fernanda)</td>
+                            <td class="py-2.5 px-4 text-slate-400">布雷拉畫廊內</td>
+                            <td class="py-2.5 px-4">08:30 - 19:00</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">€5 - 15</td>
+                        </tr>
+                        <tr data-city="米蘭" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-purple-400">米蘭</td>
+                            <td class="py-2.5 px-4 font-medium text-white">斯福爾扎古堡 (Castello Sforzesco)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Piazza Castello, Milano</td>
+                            <td class="py-2.5 px-4">07:00 - 19:30</td>
+                            <td class="py-2.5 px-4 text-emerald-400 font-bold">中庭免費</td>
+                        </tr>
+                        <tr data-city="米蘭" class="hover:bg-slate-800/40">
+                            <td class="py-2.5 px-4 font-bold text-purple-400">米蘭</td>
+                            <td class="py-2.5 px-4 font-medium text-white">盎博羅削圖書館 (Pinacoteca Ambrosiana)</td>
+                            <td class="py-2.5 px-4 text-slate-400">Piazza Pio XI, 2, Milano</td>
+                            <td class="py-2.5 px-4">10:00 - 18:00 (週三休)</td>
+                            <td class="py-2.5 px-4 text-amber-300 font-mono">€15.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="flex justify-between items-center text-xs text-slate-500 border-t border-slate-800 pt-4 mt-auto">
+                <span>Slide 12 of 12 — Master Database</span>
+                <button onclick="goToSlide(0)" class="text-amber-400 hover:underline font-semibold"><i class="fa-solid fa-arrow-up mr-1"></i> 返回 PPT 封面</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 12;
+        let isScrollView = false;
+
+        function updateSlideDisplay() {
+            for (let i = 0; i < totalSlides; i++) {
+                const slide = document.getElementById(`slide-${i}`);
+                if (slide) {
+                    if (isScrollView) {
+                        slide.classList.remove('hidden');
+                    } else {
+                        if (i === currentSlide) {
+                            slide.classList.remove('hidden');
+                        } else {
+                            slide.classList.add('hidden');
+                        }
+                    }
+                }
+            }
+
+            const counterEl = document.getElementById('slideCounter');
+            if (counterEl) counterEl.textContent = `Slide ${currentSlide + 1} / ${totalSlides}`;
+            
+            const progressEl = document.getElementById('progressBar');
+            if (progressEl) progressEl.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
+            
+            const selectEl = document.getElementById('slideSelect');
+            if (selectEl) selectEl.value = currentSlide;
+        }
+
+        function goToSlide(index) {
+            if (index >= 0 && index < totalSlides) {
+                currentSlide = index;
+                updateSlideDisplay();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSlideDisplay();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlideDisplay();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function toggleViewMode() {
+            isScrollView = !isScrollView;
+            const btnText = document.getElementById('viewModeText');
+            const controlBar = document.getElementById('pptControlBar');
+            
+            if (isScrollView) {
+                if (btnText) btnText.textContent = '切換為「PPT 投影片簡報模式」';
+                if (controlBar) controlBar.classList.add('hidden');
+            } else {
+                if (btnText) btnText.textContent = '切換為「卷軸全檢視」';
+                if (controlBar) controlBar.classList.remove('hidden');
+            }
+            updateSlideDisplay();
+        }
+
+        function filterMasterTable() {
+            const searchInput = document.getElementById('tableSearchInput')?.value.toLowerCase() || '';
+            const cityFilter = document.getElementById('cityFilterSelect')?.value || 'ALL';
+            const rows = document.querySelectorAll('#masterTableBody tr');
+
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                const city = row.getAttribute('data-city') || '';
+                const matchesSearch = text.includes(searchInput);
+                const matchesCity = (cityFilter === 'ALL' || city === cityFilter);
+
+                if (matchesSearch && matchesCity) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (isScrollView) return;
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+            if (e.key === 'ArrowRight' || e.key === 'Space') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            updateSlideDisplay();
+        });
+    </script>
+</body>
+</html>
